@@ -1,0 +1,10 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (QUE-AssetLoader.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  QUE-SFML-Template.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-SFML-Template.exe

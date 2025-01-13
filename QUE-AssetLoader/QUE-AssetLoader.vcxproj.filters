@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="AppWindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="AGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectManager.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="StringUtils.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="BGObject.cpp">
+      <Filter>GameObject\BGObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FPSCounter.cpp">
+      <Filter>GameObject\FPSCounter</Filter>
+    </ClCompile>
+    <ClCompile Include="IconObject.cpp">
+      <Filter>GameObject\IconObject</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureDisplay.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Window">
+      <UniqueIdentifier>{cf76af3a-261d-4bd4-a81b-92e604963c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helper">
+      <UniqueIdentifier>{143ad9c4-d24f-4506-9bdb-4258902e15da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{e42d11b3-b519-4d9d-963d-3857edeea669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{71068327-8b1d-4c81-a6ab-502a501f4efd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\FPSCounter">
+      <UniqueIdentifier>{3f91adf8-7331-4460-a887-41b25fd11d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\BGObject">
+      <UniqueIdentifier>{916f435f-f7b1-4825-9683-9d64fd35ae7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\IconObject">
+      <UniqueIdentifier>{9ffa21ef-6040-48b9-b38a-a13c498b1edb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppWindow.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="AGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectManager.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtils.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="BGObject.h">
+      <Filter>GameObject\BGObject</Filter>
+    </ClInclude>
+    <ClInclude Include="FPSCounter.h">
+      <Filter>GameObject\FPSCounter</Filter>
+    </ClInclude>
+    <ClInclude Include="IconObject.h">
+      <Filter>GameObject\IconObject</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureDisplay.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
