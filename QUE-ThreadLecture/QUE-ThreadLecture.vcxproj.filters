@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="IETThread.cpp" />
+    <ClCompile Include="QUE-ThreadLecture.cpp" />
+    <ClCompile Include="MyThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IETThread.h" />
+    <ClInclude Include="MyThread.h" />
+  </ItemGroup>
+</Project>

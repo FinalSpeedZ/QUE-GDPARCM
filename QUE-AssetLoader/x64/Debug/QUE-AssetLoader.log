@@ -1,22 +1,12 @@
-﻿  AppWindow.cpp
+﻿  TextureManager.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'AppWindow.cpp')
+  (compiling source file 'TextureManager.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-  TextureDisplay.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'TextureDisplay.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureDisplay.cpp(46,70): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureDisplay.cpp(48,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureDisplay.cpp(55,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureDisplay.cpp(56,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureManager.cpp(99,42): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureManager.cpp(116,37): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureManager.cpp(132,23): warning C4834: discarding return value of function with [[nodiscard]] attribute
   QUE-AssetLoader.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-AssetLoader.exe

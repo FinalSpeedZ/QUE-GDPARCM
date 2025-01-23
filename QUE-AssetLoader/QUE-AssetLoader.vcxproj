@@ -142,6 +142,7 @@
     <ClCompile Include="FPSCounter.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="IconObject.cpp" />
+    <ClCompile Include="IETThread.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StringUtils.cpp" />
     <ClCompile Include="TextureDisplay.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="FPSCounter.h" />
     <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="IconObject.h" />
+    <ClInclude Include="IETThread.h" />
     <ClInclude Include="StringUtils.h" />
     <ClInclude Include="TextureDisplay.h" />
     <ClInclude Include="TextureManager.h" />

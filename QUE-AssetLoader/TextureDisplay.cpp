@@ -49,13 +49,13 @@ void TextureDisplay::spawnObject()
 
 	this->iconList.push_back(iconObj);
 
-	int IMG_WIDTH = 70;
-	int IMG_HEIGHT = 70;
+	int IMG_WIDTH = 75;
+	int IMG_HEIGHT = 75;
 
 	float x = this->columnGrid * IMG_WIDTH;
 	float y = this->rowGrid * IMG_HEIGHT;
 
-	iconObj->setPosition(x, y);
+	iconObj->setPosition(x + 5, y + 5);
 
 	std::cout << "Set position: " << x << " " << y << std::endl;
 
