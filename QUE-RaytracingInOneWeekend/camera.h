@@ -34,6 +34,10 @@ public:
 	{
         initialize();
 
+        rtimage image(image_width, image_height);
+
+        cv::String filename = "C:/Users/asus/Coding/GDPARCM/QUE-GDPARCM/QUE-RaytracingInOneWeekend/Png/Render.png";
+
         std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
         for (int j = 0; j < image_height; j++) 
@@ -49,8 +53,31 @@ public:
                     ray r = get_ray(i, j);
                     pixel_color += ray_color(r, max_depth, world);;
                 }
-                write_color(std::cout, pixel_samples_scale * pixel_color);
+
+                auto r = pixel_color.x();
+                auto g = pixel_color.y();
+                auto b = pixel_color.z();
+
+                // Apply a linear to gamma transform for gamma 2
+                r = linear_to_gamma(r);
+                g = linear_to_gamma(g);
+                b = linear_to_gamma(b);
+
+                float scale = 1.0f / samples_per_pixel;
+                r = std::sqrt(scale * r);
+                g = std::sqrt(scale * g);
+                b = std::sqrt(scale * b);
+
+                static const interval intensity(0.000, 0.999);
+                int rbyte = int(256 * intensity.clamp(r));
+                int gbyte = int(256 * intensity.clamp(g));
+                int bbyte = int(256 * intensity.clamp(b));
+
+                image.setPixel(i, j, rbyte, gbyte, bbyte, samples_per_pixel);
+                // write_color(std::cout, pixel_samples_scale * pixel_color);
             }
+
+            image.saveImage(filename);
         }
 
         std::clog << "\rDone.                 \n";
