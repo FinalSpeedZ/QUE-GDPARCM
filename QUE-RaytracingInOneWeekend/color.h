@@ -13,7 +13,7 @@ inline double linear_to_gamma(double linear_component)
     return 0;
 }
 
-void write_color(std::ostream& out, const color& pixel_color)
+vec3 write_color(const color& pixel_color)
 {
     auto r = pixel_color.x();
     auto g = pixel_color.y();
@@ -31,5 +31,7 @@ void write_color(std::ostream& out, const color& pixel_color)
     int bbyte = int(256 * intensity.clamp(b));
 
     // Write out the pixel color components.
-    out << rbyte << ' ' << gbyte << ' ' << bbyte << '\n';
+    //out << rbyte << ' ' << gbyte << ' ' << bbyte << '\n';
+
+    return (vec3(rbyte, gbyte, bbyte));
 }

@@ -38,7 +38,7 @@ public:
 
         cv::String filename = "C:/Users/asus/Coding/GDPARCM/QUE-GDPARCM/QUE-RaytracingInOneWeekend/Png/Render.png";
 
-        std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
+        std::cout << "Image Res:" << image_width << ' ' << image_height << "\n255\n";
 
         for (int j = 0; j < image_height; j++) 
         {
@@ -54,27 +54,10 @@ public:
                     pixel_color += ray_color(r, max_depth, world);;
                 }
 
-                auto r = pixel_color.x();
-                auto g = pixel_color.y();
-                auto b = pixel_color.z();
+            	vec3 color = write_color(pixel_samples_scale * pixel_color);
 
-                // Apply a linear to gamma transform for gamma 2
-                r = linear_to_gamma(r);
-                g = linear_to_gamma(g);
-                b = linear_to_gamma(b);
 
-                float scale = 1.0f / samples_per_pixel;
-                r = std::sqrt(scale * r);
-                g = std::sqrt(scale * g);
-                b = std::sqrt(scale * b);
-
-                static const interval intensity(0.000, 0.999);
-                int rbyte = int(256 * intensity.clamp(r));
-                int gbyte = int(256 * intensity.clamp(g));
-                int bbyte = int(256 * intensity.clamp(b));
-
-                image.setPixel(i, j, rbyte, gbyte, bbyte, samples_per_pixel);
-                // write_color(std::cout, pixel_samples_scale * pixel_color);
+                image.setPixel(i, j, int(color.x()), int(color.y()), int(color.z()), samples_per_pixel);
             }
 
             image.saveImage(filename);
