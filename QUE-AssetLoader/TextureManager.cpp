@@ -50,9 +50,7 @@ void TextureManager::loadSingleStreamAsset(int index)
 			//simulate loading of very large file
 			//<code here for thread sleeping. Fill this up only when instructor told so.>
 
-
-			IETThread::sleep(2000);
-			//IETThread::sleep(20000);
+			//IETThread::sleep(2000);
 
 			std::string filePath = entry.path().string();
 			sf::Texture* texture = new sf::Texture();

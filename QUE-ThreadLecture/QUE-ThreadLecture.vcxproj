@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="IETThread.cpp" />
     <ClCompile Include="MyThread.cpp" />
-    <ClCompile Include="QUE-ThreadLecture.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IETThread.h" />
