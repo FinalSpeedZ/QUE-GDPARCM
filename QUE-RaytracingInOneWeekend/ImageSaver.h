@@ -4,10 +4,10 @@
 #include "opencv2/core.hpp"
 #include <opencv2/imgcodecs.hpp> 
 
-class rtimage 
+class ImageSaver 
 {
 public:
-	rtimage(const int imageWidth, const int imageHeight);
+	ImageSaver(const int imageWidth, const int imageHeight);
 	void setPixel(int x, int y, float r, float g, float b, int samplesPerPixel);
 
 	void saveImage(cv::String& filename) const;

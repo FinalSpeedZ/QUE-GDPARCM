@@ -1,17 +1,17 @@
 #pragma once
 
-class material;
+class Material;
 
-class hit_record
+class HitRecord
 {
 public:
-    point3 p;
-    vec3 normal;
-    shared_ptr<material> mat;
+    Point3 p;
+    Vec3 normal;
+    shared_ptr<Material> mat;
     double t;
     bool front_face;
 
-    void set_face_normal(const ray& r, const vec3& outward_normal) {
+    void set_face_normal(const Ray& r, const Vec3& outward_normal) {
         // Sets the hit record normal vector.
         // NOTE: the parameter `outward_normal` is assumed to have unit length.
 
@@ -20,10 +20,10 @@ public:
     }
 };
 
-class hittable
+class Hittable
 {
 public:
-    virtual ~hittable() = default;
+    virtual ~Hittable() = default;
 
-    virtual bool hit(const ray& r, interval ray_t, hit_record& rec) const = 0;
+    virtual bool hit(const Ray& r, Interval ray_t, HitRecord& rec) const = 0;
 };

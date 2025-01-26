@@ -1,16 +1,16 @@
 #pragma once
 
-#include "hittable.h"
+#include "Hittable.h"
 
 #include <vector>
 
-class hittable_list : public hittable 
+class HittableList : public Hittable 
 {
 public:
-    std::vector<shared_ptr<hittable>> objects;
+    std::vector<shared_ptr<Hittable>> objects;
 
-    hittable_list() {}
-    hittable_list(shared_ptr<hittable> object) 
+    HittableList() {}
+    HittableList(shared_ptr<Hittable> object) 
     { 
         add(object); 
     }
@@ -20,20 +20,20 @@ public:
         objects.clear(); 
     }
 
-    void add(shared_ptr<hittable> object) 
+    void add(shared_ptr<Hittable> object) 
     {
         objects.push_back(object);
     }
 
-    bool hit(const ray& r, interval ray_t, hit_record& rec) const override
+    bool hit(const Ray& r, Interval ray_t, HitRecord& rec) const override
 	{
-        hit_record temp_rec;
+        HitRecord temp_rec;
         bool hit_anything = false;
         auto closest_so_far = ray_t.max;
 
         for (const auto& object : objects) 
         {
-            if (object->hit(r, interval(ray_t.min, closest_so_far), temp_rec)) 
+            if (object->hit(r, Interval(ray_t.min, closest_so_far), temp_rec)) 
             {
                 hit_anything = true;
                 closest_so_far = temp_rec.t;

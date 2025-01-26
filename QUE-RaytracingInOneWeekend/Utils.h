@@ -35,8 +35,8 @@ inline double random_double(double min, double max)
 }
 
 // Common Headers
-#include "color.h"
-#include "interval.h"
-#include "ray.h"
-#include "vec3.h"
-#include "rtimage.h"
+#include "Color.h"
+#include "Interval.h"
+#include "Ray.h"
+#include "Vec3.h"
+#include "ImageSaver.h"

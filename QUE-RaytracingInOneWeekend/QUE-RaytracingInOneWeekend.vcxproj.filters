@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="rtimage.cpp">
+    <ClCompile Include="ImageSaver.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
   </ItemGroup>
@@ -18,33 +18,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vec3.h">
+    <ClInclude Include="Vec3.h">
       <Filter>Math</Filter>
     </ClInclude>
-    <ClInclude Include="color.h">
+    <ClInclude Include="Color.h">
       <Filter>Math</Filter>
     </ClInclude>
-    <ClInclude Include="ray.h">
+    <ClInclude Include="Ray.h">
       <Filter>Math</Filter>
     </ClInclude>
-    <ClInclude Include="hittable.h">
+    <ClInclude Include="Hittable.h">
       <Filter>Hittable</Filter>
     </ClInclude>
-    <ClInclude Include="sphere.h">
+    <ClInclude Include="Sphere.h">
       <Filter>Hittable</Filter>
     </ClInclude>
-    <ClInclude Include="hittable_list.h">
+    <ClInclude Include="HittableList.h">
       <Filter>Hittable</Filter>
     </ClInclude>
-    <ClInclude Include="rtweekend.h">
+    <ClInclude Include="Utils.h">
       <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="interval.h">
+    <ClInclude Include="Interval.h">
       <Filter>Math</Filter>
     </ClInclude>
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="material.h" />
-    <ClInclude Include="rtimage.h">
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="ImageSaver.h">
       <Filter>Utility</Filter>
     </ClInclude>
   </ItemGroup>

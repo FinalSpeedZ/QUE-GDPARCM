@@ -1,6 +1,6 @@
-#include "rtimage.h"
+#include "ImageSaver.h"
 
-rtimage::rtimage(const int imageWidth, const int imageHeight)
+ImageSaver::ImageSaver(const int imageWidth, const int imageHeight)
 {
 	this->imageWidth = imageWidth;
 	this->imageHeight = imageHeight;
@@ -9,7 +9,7 @@ rtimage::rtimage(const int imageWidth, const int imageHeight)
 
 }
 
-void rtimage::setPixel(int x, int y, float r, float g, float b, int samplesPerPixel)
+void ImageSaver::setPixel(int x, int y, float r, float g, float b, int samplesPerPixel)
 {
 	cv::Mat imgChannels[3];
 	cv::split(*this->pixels, imgChannels);
@@ -21,7 +21,7 @@ void rtimage::setPixel(int x, int y, float r, float g, float b, int samplesPerPi
 	cv::merge(imgChannels, 3, *this->pixels);
 }
 
-void rtimage::saveImage(cv::String& filename) const
+void ImageSaver::saveImage(cv::String& filename) const
 {
 	cv::Mat flipped;
 	cv::flip(*this->pixels, flipped, 0);  // Flip vertically (flipCode = 0)

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "interval.h"
-#include "vec3.h"
+#include "Interval.h"
+#include "Vec3.h"
 
-using color = vec3;
+using Color = Vec3;
 
 inline double linear_to_gamma(double linear_component)
 {
@@ -13,7 +13,7 @@ inline double linear_to_gamma(double linear_component)
     return 0;
 }
 
-vec3 write_color(const color& pixel_color)
+Vec3 write_color(const Color& pixel_color)
 {
     auto r = pixel_color.x();
     auto g = pixel_color.y();
@@ -25,7 +25,7 @@ vec3 write_color(const color& pixel_color)
     b = linear_to_gamma(b);
 
     // Translate the [0,1] component values to the byte range [0,255].
-    static const interval intensity(0.000, 0.999);
+    static const Interval intensity(0.000, 0.999);
     int rbyte = int(256 * intensity.clamp(r));
     int gbyte = int(256 * intensity.clamp(g));
     int bbyte = int(256 * intensity.clamp(b));
@@ -33,5 +33,5 @@ vec3 write_color(const color& pixel_color)
     // Write out the pixel color components.
     //out << rbyte << ' ' << gbyte << ' ' << bbyte << '\n';
 
-    return (vec3(rbyte, gbyte, bbyte));
+    return (Vec3(rbyte, gbyte, bbyte));
 }
