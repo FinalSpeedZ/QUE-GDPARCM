@@ -1,4 +1,5 @@
-#pragma once
+#ifndef IMAGE_SAVER_H
+#define IMAGE_SAVER_H
 
 #include <vector>
 #include "opencv2/core.hpp"
@@ -17,5 +18,8 @@ private:
 	int imageHeight;
 	int imageWidth;
 };
+
+#endif
+
 
 

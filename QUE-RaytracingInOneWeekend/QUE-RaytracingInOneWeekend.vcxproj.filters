@@ -16,6 +16,9 @@
     <Filter Include="Utility">
       <UniqueIdentifier>{40612fe6-2b96-4483-b785-aa3216429e14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Material">
+      <UniqueIdentifier>{ab335c58-9b26-44e7-a06c-2774d45cddf8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec3.h">
@@ -43,9 +46,23 @@
       <Filter>Math</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h" />
-    <ClInclude Include="Material.h" />
     <ClInclude Include="ImageSaver.h">
       <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="HitRecord.h">
+      <Filter>Hittable</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="LambertianMat.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="MetalMat.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="DielectricMat.h">
+      <Filter>Material</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef UTILS_H
+#define UTILS_H
 
 #include <cmath>
 #include <random>
@@ -40,3 +41,5 @@ inline double random_double(double min, double max)
 #include "Ray.h"
 #include "Vec3.h"
 #include "ImageSaver.h"
+
+#endif

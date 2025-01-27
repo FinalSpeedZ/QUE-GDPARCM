@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HITTABLE_LIST_H
+#define HITTABLE_LIST_H
 
 #include "Hittable.h"
 
@@ -44,3 +45,5 @@ public:
         return hit_anything;
     }
 };
+
+#endif

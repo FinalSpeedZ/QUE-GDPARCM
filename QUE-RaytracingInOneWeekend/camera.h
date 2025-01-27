@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CAMERA_H
+#define CAMERA_H
 
 #include "Hittable.h"
 #include "Material.h"
@@ -157,3 +158,5 @@ private:
         return (1.0 - a) * Color(1.0, 1.0, 1.0) + a * Color(0.5, 0.7, 1.0);
     }
 };
+
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SPHERE_H
+#define SPHERE_H
 
 #include "Hittable.h"
 
@@ -46,3 +47,5 @@ private:
     double radius;
     shared_ptr<Material> mat;
 };
+
+#endif

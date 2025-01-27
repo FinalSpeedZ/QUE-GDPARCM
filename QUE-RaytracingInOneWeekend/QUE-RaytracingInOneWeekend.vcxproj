@@ -139,10 +139,14 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="DielectricMat.h" />
+    <ClInclude Include="HitRecord.h" />
     <ClInclude Include="Hittable.h" />
     <ClInclude Include="HittableList.h" />
     <ClInclude Include="Interval.h" />
+    <ClInclude Include="LambertianMat.h" />
     <ClInclude Include="Material.h" />
+    <ClInclude Include="MetalMat.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="ImageSaver.h" />
     <ClInclude Include="Sphere.h" />

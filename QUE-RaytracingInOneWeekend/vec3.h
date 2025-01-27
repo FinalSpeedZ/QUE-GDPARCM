@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VEC_3_H
+#define VEC_3_H
 
 class Vec3 {
 public:
@@ -190,3 +191,5 @@ inline Vec3 random_in_unit_disk()
             return p;
     }
 }
+
+#endif

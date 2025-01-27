@@ -3,7 +3,12 @@
 #include "Camera.h"
 #include "Hittable.h"
 #include "HittableList.h"
+
+#include "LambertianMat.h"
+#include "MetalMat.h"
+#include "DielectricMat.h"
 #include "Material.h"
+
 #include "Sphere.h"
 
 int main()

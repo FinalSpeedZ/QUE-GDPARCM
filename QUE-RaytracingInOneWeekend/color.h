@@ -1,4 +1,5 @@
-#pragma once
+#ifndef COLOR_H
+#define COLOR_H
 
 #include "Interval.h"
 #include "Vec3.h"
@@ -35,3 +36,5 @@ Vec3 write_color(const Color& pixel_color)
 
     return (Vec3(rbyte, gbyte, bbyte));
 }
+
+#endif
