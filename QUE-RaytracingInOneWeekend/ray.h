@@ -6,24 +6,12 @@
 class Ray
 {
 public:
-    Ray() {}
+    Ray(); // Default constructor declaration
+    Ray(const Point3& origin, const Vec3& direction); // Parameterized constructor declaration
 
-    Ray(const Point3& origin, const Vec3& direction) : orig(origin), dir(direction) {}
-
-    const Point3& origin() const
-    {
-	    return orig;
-    }
-
-    const Vec3& direction() const
-    {
-	    return dir;
-    }
-
-    Point3 at(double t) const
-	{
-        return orig + t * dir;
-    }
+    const Point3& origin() const; // origin() method declaration
+    const Vec3& direction() const; // direction() method declaration
+    Point3 at(double t) const; // at() method declaration
 
 private:
     Point3 orig;

@@ -133,8 +133,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="DielectricMat.cpp" />
+    <ClCompile Include="HitRecord.cpp" />
+    <ClCompile Include="HittableList.cpp" />
+    <ClCompile Include="Interval.cpp" />
+    <ClCompile Include="LambertianMat.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ImageSaver.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="MetalMat.cpp" />
+    <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Vec3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />

@@ -3,6 +3,8 @@
 
 #include "HitRecord.h"
 
+#include "Interval.h"
+
 class Hittable
 {
 public:

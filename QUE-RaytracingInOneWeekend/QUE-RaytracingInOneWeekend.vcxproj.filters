@@ -5,6 +5,42 @@
     <ClCompile Include="ImageSaver.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
+    <ClCompile Include="HitRecord.cpp">
+      <Filter>Hittable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Hittable</Filter>
+    </ClCompile>
+    <ClCompile Include="HittableList.cpp">
+      <Filter>Hittable</Filter>
+    </ClCompile>
+    <ClCompile Include="DielectricMat.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="LambertianMat.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="MetalMat.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Interval.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Hittable">
