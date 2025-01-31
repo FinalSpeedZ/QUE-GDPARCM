@@ -27,8 +27,6 @@ void StreamAssetLoader::run()
 	std::mt19937 engine(seeder());
 	std::uniform_int_distribution<int> dist(2000, 5000);
 
-	IETThread::sleep(dist(engine));
-
 	std::vector<std::string> tokens = StringUtils::split(path, '/');
 	std::string assetName = StringUtils::split(tokens[tokens.size() - 1], '.')[0];
 

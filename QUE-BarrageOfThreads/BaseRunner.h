@@ -12,6 +12,10 @@ public:
 	BaseRunner();
 	void run();
 
+	void addThreads(int num);
+	void threadWorker(int id);
+
+
 	static BaseRunner* getInstance();
 	static BaseRunner* sharedInstance;
 	float getFPS() const;

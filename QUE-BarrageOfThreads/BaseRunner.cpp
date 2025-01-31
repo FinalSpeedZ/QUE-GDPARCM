@@ -32,10 +32,16 @@ BaseRunner::BaseRunner() :
 	GameObjectManager::getInstance()->addObject(fpsCounter);
 }
 
-void BaseRunner::run() {
+void BaseRunner::run()
+{
 	sf::Clock clock;
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
+	sf::Time threadSpawnTimer;
+
+	int totalThreadsAdded = 1000; // Initial 1000 threads
+	addThreads(1000);
+
 	while (this->window.isOpen())
 	{
 		currentTime = clock.getElapsedTime();
@@ -48,8 +54,37 @@ void BaseRunner::run() {
 
 		previousTime = currentTime;
 
+		// Add threads every 3 seconds until a total of 5000
+		if (threadSpawnTimer.asSeconds() >= 3.0f && totalThreadsAdded < 5000) {
+			addThreads(500);
+			totalThreadsAdded += 500;
+			threadSpawnTimer -= sf::seconds(3.0f);  // Reset the timer
+		}
 
+		threadSpawnTimer += sf::seconds(deltaTime); // Update thread timer
 	}
+}
+
+void BaseRunner::addThreads(int num)
+{
+	std::vector<std::thread> threads;
+
+	for (int i = 0; i < num; ++i)
+	{
+		std::thread([this, i]() { this->threadWorker(i); }).detach();
+	}
+}
+
+void BaseRunner::threadWorker(int id)
+{
+	volatile long long sum = 0;
+
+	for (long long i = 0; i < 100000000; ++i) 
+	{
+		sum += i; // Arbitrary computation to use CPU
+	}
+
+	//std::cout << "Thread " << id << " completed with sum = " << sum << "\n";
 }
 
 BaseRunner* BaseRunner::getInstance()

@@ -65,7 +65,6 @@ void TextureManager::loadSingleStreamAsset(int index, IExecutionEvent* execution
 	{
 		if (index == fileNum)
 		{
-
 			std::string path = entry.path().generic_string();
 			StreamAssetLoader* assetLoader = new StreamAssetLoader(path, executionEvent);
 			assetLoader->start();
