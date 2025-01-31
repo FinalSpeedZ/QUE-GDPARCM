@@ -1,5 +1,7 @@
 #pragma once
+
 #include "AGameObject.h"
+
 class FPSCounter : public AGameObject
 {
 public:
@@ -18,7 +20,5 @@ private:
 private:
 	sf::Time updateTime;
 	sf::Text* statsText;
-	int framesPassed = 0;
-
 };
 

@@ -20,9 +20,6 @@
     <ClCompile Include="StringUtils.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="IETThread.cpp">
-      <Filter>Thread</Filter>
-    </ClCompile>
     <ClCompile Include="IconObject.cpp">
       <Filter>GameObject\IconObject</Filter>
     </ClCompile>
@@ -31,6 +28,15 @@
     </ClCompile>
     <ClCompile Include="TextureDisplay.cpp">
       <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="IExecutionEvent.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="IETThread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamAssetLoader.cpp">
+      <Filter>Thread</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,9 +69,6 @@
     <ClInclude Include="GameObjectManager.h">
       <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="BaseRunner.h">
-      <Filter>Runner</Filter>
-    </ClInclude>
     <ClInclude Include="AGameObject.h">
       <Filter>GameObject</Filter>
     </ClInclude>
@@ -89,6 +92,15 @@
     </ClInclude>
     <ClInclude Include="TextureDisplay.h">
       <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="IExecutionEvent.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseRunner.h">
+      <Filter>Runner</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamAssetLoader.h">
+      <Filter>Thread</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

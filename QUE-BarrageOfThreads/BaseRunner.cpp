@@ -1,20 +1,26 @@
 #include "BaseRunner.h"
 
+#include <iostream>
+
 #include  "GameObjectManager.h"
 #include "BGObject.h"
 #include "TextureManager.h"
 #include "TextureDisplay.h"
 #include "FPSCounter.h"
 
+/// <summary>
+/// This demonstrates a running parallax background where after X seconds, a batch of assets will be streamed and loaded.
+/// </summary>
+
 const float FRAME_RATE = 60.0f;
-const sf::Time BaseRunner::TIME_PER_FRAME = sf::seconds(1.f / FRAME_RATE);
+const sf::Time BaseRunner::TIME_PER_FRAME = sf::seconds(1.0f / FRAME_RATE);
 BaseRunner* BaseRunner::sharedInstance = NULL;
 
 BaseRunner::BaseRunner() :
-	window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "QUE-BarrageOfThreads", sf::Style::Default)
-{
+	window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "HO: Entity Component", sf::Style::Close) {
+
 	sharedInstance = this;
-	this->window.setFramerateLimit(FRAME_RATE);
+	this->window.setFramerateLimit(int(FRAME_RATE));
 
 	//load initial textures
 	TextureManager::getInstance()->loadFromAssetList();
@@ -30,18 +36,14 @@ BaseRunner::BaseRunner() :
 	GameObjectManager::getInstance()->addObject(fpsCounter);
 }
 
-void BaseRunner::run()
-{
+void BaseRunner::run() {
 	sf::Clock clock;
-
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
-
 	while (this->window.isOpen())
 	{
 		currentTime = clock.getElapsedTime();
 		float deltaTime = currentTime.asSeconds() - previousTime.asSeconds();
-
 		this->fps = floor(1.0f / deltaTime);
 
 		processEvents();
@@ -49,6 +51,8 @@ void BaseRunner::run()
 		render();
 
 		previousTime = currentTime;
+
+
 	}
 }
 
@@ -65,10 +69,8 @@ float BaseRunner::getFPS() const
 void BaseRunner::processEvents()
 {
 	sf::Event event;
-	if (this->window.pollEvent(event)) 
-	{
-		switch (event.type)
-		{
+	if (this->window.pollEvent(event)) {
+		switch (event.type) {
 
 		default: GameObjectManager::getInstance()->processInput(event); break;
 		case sf::Event::Closed:
@@ -79,13 +81,11 @@ void BaseRunner::processEvents()
 	}
 }
 
-void BaseRunner::update(sf::Time elapsedTime)
-{
+void BaseRunner::update(sf::Time elapsedTime) {
 	GameObjectManager::getInstance()->update(elapsedTime);
 }
 
-void BaseRunner::render()
-{
+void BaseRunner::render() {
 	this->window.clear();
 	GameObjectManager::getInstance()->draw(&this->window);
 	this->window.display();

@@ -1,11 +1,5 @@
-﻿  BaseRunner.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\BaseRunner.cpp(17,33): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
-  TextureDisplay.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureDisplay.cpp(35,70): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureDisplay.cpp(42,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureDisplay.cpp(43,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  TextureManager.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureManager.cpp(97,42): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureManager.cpp(114,37): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
+﻿  FPSCounter.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\FPSCounter.cpp(24,57): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\FPSCounter.cpp(24,51): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\FPSCounter.cpp(24,45): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
   QUE-BarrageOfThreads.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-BarrageOfThreads.exe

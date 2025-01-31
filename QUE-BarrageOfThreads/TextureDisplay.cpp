@@ -1,9 +1,12 @@
 #include "TextureDisplay.h"
+
 #include <iostream>
+
 #include "TextureManager.h"
 #include "BaseRunner.h"
 #include "GameObjectManager.h"
 #include "IconObject.h"
+
 TextureDisplay::TextureDisplay() : AGameObject("TextureDisplay")
 {
 }
@@ -19,19 +22,30 @@ void TextureDisplay::processInput(sf::Event event)
 void TextureDisplay::update(sf::Time deltaTime)
 {
 	this->ticks += BaseRunner::TIME_PER_FRAME.asMilliseconds();
-
-	if ((this->streamingType == StreamingType::SINGLE_STREAM) && this->ticks > this->STREAMING_LOAD_DELAY && this->numDisplayed < 480)
+	if (this->streamingType == StreamingType::BATCH_LOAD && !this->startedStreaming && this->ticks > this->STREAMING_LOAD_DELAY)
+	{
+		this->startedStreaming = true;
+		this->ticks = 0.0f;
+		TextureManager::getInstance()->loadStreamingAssets();
+	}
+	else if (this->streamingType == StreamingType::SINGLE_STREAM && this->ticks > this->STREAMING_LOAD_DELAY)
 	{
 		this->ticks = 0.0f;
-		TextureManager::getInstance()->loadSingleStreamAsset(this->numDisplayed);
+		TextureManager::getInstance()->loadSingleStreamAsset(this->numDisplayed, this);
 		this->numDisplayed++;
-		this->spawnObject();
 	}
+}
+
+void TextureDisplay::onFinishedExecution()
+{
+	this->spawnObject(); //executes spawn once the texture is ready.
 }
 
 void TextureDisplay::spawnObject()
 {
-	std::string objectName = "Icon_" + std::to_string(this->iconList.size());
+	this->guard.lock();
+
+	std::string objectName = "Icon_" + to_string(this->iconList.size());
 	IconObject* iconObj = new IconObject(objectName, this->iconList.size());
 	this->iconList.push_back(iconObj);
 
@@ -41,6 +55,7 @@ void TextureDisplay::spawnObject()
 
 	float x = this->columnGrid * IMG_WIDTH;
 	float y = this->rowGrid * IMG_HEIGHT;
+
 	iconObj->setPosition(x, y);
 
 	std::cout << "Set position: " << x << " " << y << std::endl;
@@ -51,6 +66,7 @@ void TextureDisplay::spawnObject()
 		this->columnGrid = 0;
 		this->rowGrid++;
 	}
-
 	GameObjectManager::getInstance()->addObject(iconObj);
+
+	this->guard.unlock();
 }

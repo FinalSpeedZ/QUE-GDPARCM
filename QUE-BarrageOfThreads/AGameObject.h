@@ -5,7 +5,6 @@
 
 class AGameObject : sf::NonCopyable
 {
-
 public:
 	AGameObject(std::string name);
 	~AGameObject();

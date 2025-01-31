@@ -1,9 +1,6 @@
 #include <iostream>
-
 #include "BaseRunner.h"
-
-int main()
-{
+int main() {
 	BaseRunner runner;
 	runner.run();
 }
