@@ -8,16 +8,12 @@
 #include "TextureDisplay.h"
 #include "FPSCounter.h"
 
-/// <summary>
-/// This demonstrates a running parallax background where after X seconds, a batch of assets will be streamed and loaded.
-/// </summary>
-
 const float FRAME_RATE = 60.0f;
 const sf::Time BaseRunner::TIME_PER_FRAME = sf::seconds(1.0f / FRAME_RATE);
 BaseRunner* BaseRunner::sharedInstance = NULL;
 
 BaseRunner::BaseRunner() :
-	window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "HO: Entity Component", sf::Style::Close) {
+	window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "QUE-BarrageOfThreads", sf::Style::Close) {
 
 	sharedInstance = this;
 	this->window.setFramerateLimit(int(FRAME_RATE));

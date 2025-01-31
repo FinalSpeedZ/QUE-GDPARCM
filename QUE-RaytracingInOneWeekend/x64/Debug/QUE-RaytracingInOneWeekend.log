@@ -1,13 +1,1 @@
-﻿  DielectricMat.cpp
-  main.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\Camera.h(61,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'main.cpp')
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\Camera.h(61,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'main.cpp')
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\Camera.h(61,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'main.cpp')
-  
-  Generating Code...
-  QUE-RaytracingInOneWeekend.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-RaytracingInOneWeekend.exe
+﻿

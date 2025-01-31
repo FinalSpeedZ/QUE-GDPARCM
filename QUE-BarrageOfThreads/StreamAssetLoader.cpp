@@ -25,7 +25,7 @@ void StreamAssetLoader::run()
 	//simulate loading of very large file
 	std::random_device seeder;
 	std::mt19937 engine(seeder());
-	std::uniform_int_distribution<int> dist(1000, 4000);
+	std::uniform_int_distribution<int> dist(2000, 5000);
 
 	IETThread::sleep(dist(engine));
 
@@ -36,7 +36,8 @@ void StreamAssetLoader::run()
 
 	std::cout << "[TextureManager] Loaded streaming texture: " << assetName << std::endl;
 
+
 	this->execEvent->onFinishedExecution();
-	//delete after being done
+
 	delete this;
 }

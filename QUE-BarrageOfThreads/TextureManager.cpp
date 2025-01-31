@@ -3,6 +3,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <random>
 
 #include "StringUtils.h"
 #include "IETThread.h"
@@ -64,7 +65,6 @@ void TextureManager::loadSingleStreamAsset(int index, IExecutionEvent* execution
 	{
 		if (index == fileNum)
 		{
-			IETThread::sleep(200);
 
 			std::string path = entry.path().generic_string();
 			StreamAssetLoader* assetLoader = new StreamAssetLoader(path, executionEvent);
