@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QUE-ThreadLecture", "QUE-Th
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QUE-RaytracingInOneWeekend", "QUE-RaytracingInOneWeekend\QUE-RaytracingInOneWeekend.vcxproj", "{44A9DA14-AC74-4C3B-8B05-3D8EBAB5EC47}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QUE-BarrageOfThreads", "QUE-BarrageOfThreads\QUE-BarrageOfThreads.vcxproj", "{58E43BD8-9E97-475A-B548-F5C53872BA1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{44A9DA14-AC74-4C3B-8B05-3D8EBAB5EC47}.Release|x64.Build.0 = Release|x64
 		{44A9DA14-AC74-4C3B-8B05-3D8EBAB5EC47}.Release|x86.ActiveCfg = Release|Win32
 		{44A9DA14-AC74-4C3B-8B05-3D8EBAB5EC47}.Release|x86.Build.0 = Release|Win32
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Debug|Any CPU.Build.0 = Debug|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Debug|x64.ActiveCfg = Debug|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Debug|x64.Build.0 = Debug|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Debug|x86.ActiveCfg = Debug|Win32
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Debug|x86.Build.0 = Debug|Win32
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Release|Any CPU.ActiveCfg = Release|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Release|Any CPU.Build.0 = Release|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Release|x64.ActiveCfg = Release|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Release|x64.Build.0 = Release|x64
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Release|x86.ActiveCfg = Release|Win32
+		{58E43BD8-9E97-475A-B548-F5C53872BA1E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
