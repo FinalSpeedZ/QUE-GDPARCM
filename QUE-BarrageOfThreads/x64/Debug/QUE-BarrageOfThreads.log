@@ -1,2 +1,4 @@
-﻿  StreamAssetLoader.cpp
+﻿  TextureManager.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureManager.cpp(99,42): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureManager.cpp(116,37): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   QUE-BarrageOfThreads.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-BarrageOfThreads.exe

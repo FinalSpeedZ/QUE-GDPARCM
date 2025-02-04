@@ -39,8 +39,6 @@ void BaseRunner::run()
 	sf::Time currentTime;
 	sf::Time threadSpawnTimer;
 
-	int totalThreadsAdded = 1000; // Initial 1000 threads
-	addThreads(1000);
 
 	while (this->window.isOpen())
 	{
@@ -53,15 +51,6 @@ void BaseRunner::run()
 		render();
 
 		previousTime = currentTime;
-
-		// Add threads every 3 seconds until a total of 5000
-		if (threadSpawnTimer.asSeconds() >= 3.0f && totalThreadsAdded < 5000) {
-			addThreads(500);
-			totalThreadsAdded += 500;
-			threadSpawnTimer -= sf::seconds(3.0f);  // Reset the timer
-		}
-
-		threadSpawnTimer += sf::seconds(deltaTime); // Update thread timer
 	}
 }
 

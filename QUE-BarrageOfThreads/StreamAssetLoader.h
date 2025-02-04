@@ -1,17 +1,18 @@
 #pragma once
 
 #include "IETThread.h"
+#include "IWorkerAction.h"
 
 class IExecutionEvent;
 
-class StreamAssetLoader : public IETThread
+class StreamAssetLoader : public IWorkerAction
 {
 public:
 	StreamAssetLoader(std::string path, IExecutionEvent* executionEvent);
 	~StreamAssetLoader();
 
 private:
-	void run() override;
+	void onStartTask() override;
 
 private:
 	std::string path;

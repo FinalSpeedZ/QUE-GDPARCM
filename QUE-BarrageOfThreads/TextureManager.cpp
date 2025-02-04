@@ -10,7 +10,6 @@
 #include "StreamAssetLoader.h"
 #include "IExecutionEvent.h"
 
-//a singleton class
 TextureManager* TextureManager::sharedInstance = NULL;
 
 TextureManager* TextureManager::getInstance()
@@ -25,6 +24,9 @@ TextureManager* TextureManager::getInstance()
 TextureManager::TextureManager()
 {
 	this->countStreamingAssets();
+
+	this->threadPool = new ThreadPool("TextureManagerPool", 50);
+	this->threadPool->startScheduler();
 }
 
 void TextureManager::loadFromAssetList()
@@ -67,7 +69,7 @@ void TextureManager::loadSingleStreamAsset(int index, IExecutionEvent* execution
 		{
 			std::string path = entry.path().generic_string();
 			StreamAssetLoader* assetLoader = new StreamAssetLoader(path, executionEvent);
-			assetLoader->start();
+			this->threadPool->scheduleTask(assetLoader);
 
 			break;
 		}

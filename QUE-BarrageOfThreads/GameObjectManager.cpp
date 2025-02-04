@@ -48,10 +48,14 @@ void GameObjectManager::processInput(sf::Event event)
 
 void GameObjectManager::update(sf::Time deltaTime)
 {
+	this->guard.lock();
+
 	for (int i = 0; i < this->gameObjectList.size(); i++) 
 	{
 		this->gameObjectList[i]->update(deltaTime);
 	}
+
+	this->guard.unlock();
 }
 
 void GameObjectManager::draw(sf::RenderWindow* window)
@@ -64,9 +68,13 @@ void GameObjectManager::draw(sf::RenderWindow* window)
 
 void GameObjectManager::addObject(AGameObject* gameObject)
 {
+	this->guard.lock();
+
 	this->gameObjectMap[gameObject->getName()] = gameObject;
 	this->gameObjectList.push_back(gameObject);
 	this->gameObjectMap[gameObject->getName()]->initialize(); // initialize the object
+
+	this->guard.unlock();
 }
 
 void GameObjectManager::deleteObject(AGameObject* gameObject)

@@ -38,6 +38,12 @@
     <ClCompile Include="StreamAssetLoader.cpp">
       <Filter>Thread</Filter>
     </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="PoolWorkerThread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Runner">
@@ -100,6 +106,18 @@
       <Filter>Runner</Filter>
     </ClInclude>
     <ClInclude Include="StreamAssetLoader.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="IFinishedTask.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="PoolWorkerThread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="IWorkerAction.h">
       <Filter>Thread</Filter>
     </ClInclude>
   </ItemGroup>

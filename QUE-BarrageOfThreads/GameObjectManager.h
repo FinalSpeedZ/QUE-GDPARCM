@@ -1,5 +1,6 @@
 #pragma once
 
+#include <mutex>
 #include <unordered_map>
 #include <vector>
 #include <string>
@@ -33,5 +34,7 @@ private:
 
 	std::unordered_map<std::string, AGameObject*> gameObjectMap;
 	std::vector<AGameObject*> gameObjectList;
+
+	std::mutex guard;
 };
 

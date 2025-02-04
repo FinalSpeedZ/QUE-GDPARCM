@@ -2,6 +2,7 @@
 
 #include <unordered_map>
 
+#include "ThreadPool.h"
 #include "SFML/Graphics.hpp"
 
 class IExecutionEvent;
@@ -42,4 +43,5 @@ private:
 	const std::string STREAMING_PATH = "../Media/Streaming/";
 	int streamingAssetCount = 0;
 
+	ThreadPool* threadPool;
 };
