@@ -17,6 +17,9 @@ private:
 	std::unique_ptr<cv::Mat> pixels;
 	int imageHeight;
 	int imageWidth;
+
+	std::mutex guard;
+
 };
 
 #endif

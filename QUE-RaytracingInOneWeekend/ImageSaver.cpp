@@ -11,6 +11,8 @@ ImageSaver::ImageSaver(const int imageWidth, const int imageHeight)
 
 void ImageSaver::setPixel(int x, int y, float r, float g, float b, int samplesPerPixel)
 {
+	this->guard.lock();
+
 	cv::Mat imgChannels[3];
 	cv::split(*this->pixels, imgChannels);
 
@@ -19,6 +21,8 @@ void ImageSaver::setPixel(int x, int y, float r, float g, float b, int samplesPe
 	imgChannels[2].at<uchar>(this->imageHeight - 1 - y, x) = r;
 
 	cv::merge(imgChannels, 3, *this->pixels);
+
+	this->guard.unlock();
 }
 
 void ImageSaver::saveImage(cv::String& filename) const

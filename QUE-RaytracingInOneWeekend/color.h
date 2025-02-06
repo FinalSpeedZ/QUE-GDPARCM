@@ -6,8 +6,8 @@
 
 using Color = Vec3;
 
-inline double linear_to_gamma(double linear_component); // Declaration
+inline double linear_to_gamma(double linear_component); 
 
-Vec3 write_color(const Color& pixel_color); // Declaration
+Vec3 write_color(const Color& pixel_color); 
 
 #endif

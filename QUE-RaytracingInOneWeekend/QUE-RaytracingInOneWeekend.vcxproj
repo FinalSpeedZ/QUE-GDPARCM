@@ -133,18 +133,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="DielectricMat.cpp" />
     <ClCompile Include="HitRecord.cpp" />
     <ClCompile Include="HittableList.cpp" />
+    <ClCompile Include="IETThread.cpp" />
+    <ClCompile Include="IExecutionEvent.cpp" />
     <ClCompile Include="Interval.cpp" />
     <ClCompile Include="LambertianMat.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ImageSaver.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="MetalMat.cpp" />
+    <ClCompile Include="PoolWorkerThread.cpp" />
     <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="WorkerRaytracer.cpp" />
     <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="Vec3.cpp" />
   </ItemGroup>
@@ -155,13 +162,21 @@
     <ClInclude Include="HitRecord.h" />
     <ClInclude Include="Hittable.h" />
     <ClInclude Include="HittableList.h" />
+    <ClInclude Include="IETThread.h" />
+    <ClInclude Include="IExecutionEvent.h" />
+    <ClInclude Include="IFinishedTask.h" />
     <ClInclude Include="Interval.h" />
+    <ClInclude Include="IWorkerAction.h" />
     <ClInclude Include="LambertianMat.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="MetalMat.h" />
+    <ClInclude Include="PoolWorkerThread.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="ImageSaver.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="WorkerRaytracer.h" />
     <ClInclude Include="Sphere.h" />
+    <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="Vec3.h" />
   </ItemGroup>

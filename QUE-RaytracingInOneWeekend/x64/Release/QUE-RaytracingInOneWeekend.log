@@ -1,0 +1,44 @@
+﻿  Camera.cpp
+  Color.cpp
+  DielectricMat.cpp
+  HitRecord.cpp
+  HittableList.cpp
+  IETThread.cpp
+  IExecutionEvent.cpp
+  Interval.cpp
+  LambertianMat.cpp
+  main.cpp
+  ImageSaver.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244: '=': conversion from 'float' to '_Tp', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         with
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         [
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:             _Tp=uchar
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         ]
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244: '=': conversion from 'float' to '_Tp', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:         with
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:         [
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:             _Tp=uchar
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:         ]
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244: '=': conversion from 'float' to '_Tp', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         with
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         [
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:             _Tp=uchar
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         ]
+  Material.cpp
+  MetalMat.cpp
+  PoolWorkerThread.cpp
+  Ray.cpp
+  Renderer.cpp
+  WorkerRaytracer.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\WorkerRaytracer.cpp(35,83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\WorkerRaytracer.cpp(35,67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\WorkerRaytracer.cpp(35,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Sphere.cpp
+  ThreadPool.cpp
+  Utils.cpp
+  Compiling...
+  Vec3.cpp
+ImageSaver.obj : error LNK2001: unresolved external symbol "bool __cdecl cv::imwrite(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class cv::_InputArray const &,class std::vector<int,class std::allocator<int> > const &)" (?imwrite@cv@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV_InputArray@1@AEBV?$vector@HV?$allocator@H@std@@@3@@Z)
+ImageSaver.obj : error LNK2001: unresolved external symbol "void __cdecl cv::flip(class cv::_InputArray const &,class cv::_OutputArray const &,int)" (?flip@cv@@YAXAEBV_InputArray@1@AEBV_OutputArray@1@H@Z)
+ImageSaver.obj : error LNK2001: unresolved external symbol "void __cdecl cv::merge(class cv::Mat const *,unsigned __int64,class cv::_OutputArray const &)" (?merge@cv@@YAXPEBVMat@1@_KAEBV_OutputArray@1@@Z)
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Release\QUE-RaytracingInOneWeekend.exe : fatal error LNK1120: 3 unresolved externals
