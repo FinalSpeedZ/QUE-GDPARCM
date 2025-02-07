@@ -30,9 +30,9 @@ private:
 	int samplesPerPixel = 500;
 	int rayMaxDepth = 50;
 
-	int threadCount = 1080;
+	int threadCount = std::thread::hardware_concurrency();
 	int linesRemaining = this->imgHeight;
-	int rowsPerTask = 1;
+	int rowsPerTask = 2;
 
 	ThreadPool* threadPool;
 
