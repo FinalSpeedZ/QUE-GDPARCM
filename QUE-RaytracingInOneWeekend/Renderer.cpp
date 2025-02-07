@@ -10,8 +10,6 @@
 
 Renderer::Renderer()
 {
-    srand(static_cast<unsigned int>(time(0)));
-
     this->threadPool = NULL;
 
 	this->camera = new Camera();
@@ -22,8 +20,13 @@ Renderer::Renderer()
     camera->max_depth = this->rayMaxDepth;
 
     camera->vfov = 40;
-    camera->lookfrom = Point3(-10, 4, -14);
-    camera->lookat = Point3(-2, 1,-5);
+    //camera->lookfrom = Point3(-10, 4, -14); // TestCase 1
+    //camera->lookfrom = Point3(-10, 3, -3); // TestCase 2
+    camera->lookfrom = Point3(0, 3, 10); // TestCase 3
+    //camera->lookat = Point3(-2, 1, -5); // TestCase 1
+    //camera->lookat = Point3(-5, 1, -5); // TestCase 2
+    camera->lookat = Point3(0, 3,0); // TestCase 3
+
     camera->vup = Vec3(0, 1, 0);
 
     camera->defocus_angle = 0.6;
@@ -42,7 +45,7 @@ void Renderer::run()
 
 	this->image = new ImageSaver(this->imgWidth, this->imgHeight);
 
-    std::string filename = "C:/Users/asus/Coding/GDPARCM/QUE-GDPARCM/QUE-RaytracingInOneWeekend/Png/Render.png";
+    std::string filename = "C:/Users/asus/Coding/GDPARCM/QUE-GDPARCM/QUE-RaytracingInOneWeekend/Png/QUE-TestCase3.png";
 
     std::cout << "Image Res: " << this->imgWidth << ' ' << this->imgHeight << std::endl;
     std::cout << "Thread Count: " << threadCount << std::endl;
@@ -79,55 +82,84 @@ Hittable* Renderer::createWorld(int smallSpheres)
 
     int spheres = 0;
 
-    while (spheres < smallSpheres)
+	// Test Case 3
+    for (int i = 0; i < 10; i++)
     {
-        for (int a = -20; a < 20; a++)
+        Point3 center(0, 0.2 + i * (2 * 0.2), 0);
+
+        shared_ptr<Material> sphere_material;
+        double choose_mat = random_double();
+
+        if (choose_mat < 0.45) // Lambertian material
         {
-            for (int b = -20; b < 20; b++)
-            {
-                auto choose_mat = random_double();
-                Point3 center(a + 0.9 * random_double(), 0.2, b + 0.9 * random_double());
-
-                if ((center - Point3(4, 0.2, 0)).length() > 0.9)
-                {
-                    shared_ptr<Material> sphere_material;
-
-                    if (choose_mat < 0.8)
-                    {
-                        auto albedo = Color::random() * Color::random();
-                        sphere_material = make_shared<LambertianMat>(albedo);
-                        world->add(make_shared<Sphere>(center, 0.2, sphere_material));
-                    }
-                    else if (choose_mat < 0.95)
-                    {
-                        auto albedo = Color::random(0.5, 1);
-                        auto fuzz = random_double(0, 0.5);
-                        sphere_material = make_shared<MetalMat>(albedo, fuzz);
-                        world->add(make_shared<Sphere>(center, 0.2, sphere_material));
-                    }
-                    else
-                    {
-                        sphere_material = make_shared<DielectricMat>(1.5);
-                        world->add(make_shared<Sphere>(center, 0.2, sphere_material));
-                    }
-
-                	spheres++;
-                }
-            }
+            auto albedo = Color::random() * Color::random();
+            sphere_material = make_shared<LambertianMat>(albedo);
         }
+        else if (choose_mat < 0.75) // Metal material
+        {
+            auto albedo = Color::random(0.5, 1);
+            auto fuzz = random_double(0, 0.5);
+            sphere_material = make_shared<MetalMat>(albedo, fuzz);
+        }
+        else // Dielectric material
+        {
+            sphere_material = make_shared<DielectricMat>(1.5);
+        }
+
+        world->add(make_shared<Sphere>(center, 0.2, sphere_material));
     }
 
-    auto material1 = make_shared<DielectricMat>(1.5);
-    world->add(make_shared<Sphere>(Point3(0, 1, -5), 1.0, material1));
 
-    auto material2 = make_shared<LambertianMat>(Color(0.4, 0.2, 0.1));
-    world->add(make_shared<Sphere>(Point3(-2.5, 1, -5), 1.0, material2));
+    //while (spheres < smallSpheres)
+    //{
+    //    for (int a = -20; a < 20; a++)
+    //    {
+    //        for (int b = -20; b < 20; b++)
+    //        {
+    //            auto choose_mat = random_double();
+    //            Point3 center(a + 0.9 * random_double(), 0.2, b + 0.9 * random_double());
 
-    auto material3 = make_shared<MetalMat>(Color(0.7, 0.6, 0.5), 0.0);
-    world->add(make_shared<Sphere>(Point3(2.5, 1, -5), 1.0, material3));
+    //            if ((center - Point3(-5, 1, -5)).length() > 1.3 && (center - Point3(-2.5, 1, -5)).length() > 1 &&
+    //                (center - Point3(0, 1, -5)).length() > 1 && (center - Point3(2.5, 1, -5)).length() > 1)
+    //            {
+    //                shared_ptr<Material> sphere_material;
 
-    auto material4 = make_shared<MetalMat>(Color(0.8, 0.2, 0.3), 0.0);
-    world->add(make_shared<Sphere>(Point3(-5, 1, -5), 1.0, material4));
+    //                if (choose_mat < 0.33)
+    //                {
+    //                    auto albedo = Color::random() * Color::random();
+    //                    sphere_material = make_shared<LambertianMat>(albedo);
+    //                    world->add(make_shared<Sphere>(center, 0.2, sphere_material));
+    //                }
+    //                else if (choose_mat < 0.66)
+    //                {
+    //                    auto albedo = Color::random(0.5, 1);
+    //                    auto fuzz = random_double(0, 0.5);
+    //                    sphere_material = make_shared<MetalMat>(albedo, fuzz);
+    //                    world->add(make_shared<Sphere>(center, 0.2, sphere_material));
+    //                }
+    //                else
+    //                {
+    //                    sphere_material = make_shared<DielectricMat>(1.5);
+    //                    world->add(make_shared<Sphere>(center, 0.2, sphere_material));
+    //                }
+
+    //            	spheres++;
+    //            }
+    //        }
+    //    }
+    //}
+
+    //auto material1 = make_shared<DielectricMat>(1.5);
+    //world->add(make_shared<Sphere>(Point3(0, 1, -5), 1.0, material1));
+
+    //auto material2 = make_shared<LambertianMat>(Color(0.4, 0.2, 0.1));
+    //world->add(make_shared<Sphere>(Point3(-2.5, 1, -5), 1.0, material2));
+
+    //auto material3 = make_shared<MetalMat>(Color(0.7, 0.6, 0.5), 0.0);
+    //world->add(make_shared<Sphere>(Point3(2.5, 1, -5), 1.0, material3));
+
+    //auto material4 = make_shared<MetalMat>(Color(0.8, 0.3, 0.2), 0.0);
+    //world->add(make_shared<Sphere>(Point3(-5, 1, -5), 1.0, material4));
 
     return world;
 }

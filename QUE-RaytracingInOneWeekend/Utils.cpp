@@ -13,7 +13,8 @@ double degrees_to_radians(double degrees)
 double random_double()
 {
     static std::uniform_real_distribution<double> distribution(0.0, 1.0);
-    static std::mt19937 generator;
+    static std::random_device rd;
+    static std::mt19937 generator(rd());
     return distribution(generator);
 }
 

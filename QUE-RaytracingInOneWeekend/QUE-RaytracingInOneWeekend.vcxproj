@@ -142,7 +142,6 @@
     <ClCompile Include="HitRecord.cpp" />
     <ClCompile Include="HittableList.cpp" />
     <ClCompile Include="IETThread.cpp" />
-    <ClCompile Include="IExecutionEvent.cpp" />
     <ClCompile Include="Interval.cpp" />
     <ClCompile Include="LambertianMat.cpp" />
     <ClCompile Include="main.cpp" />

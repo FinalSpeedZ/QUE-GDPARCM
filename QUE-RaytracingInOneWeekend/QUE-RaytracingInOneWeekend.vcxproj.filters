@@ -44,9 +44,6 @@
     <ClCompile Include="IETThread.cpp">
       <Filter>Thread</Filter>
     </ClCompile>
-    <ClCompile Include="IExecutionEvent.cpp">
-      <Filter>Thread</Filter>
-    </ClCompile>
     <ClCompile Include="PoolWorkerThread.cpp">
       <Filter>Thread</Filter>
     </ClCompile>

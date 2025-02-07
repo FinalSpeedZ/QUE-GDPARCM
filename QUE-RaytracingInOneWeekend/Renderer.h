@@ -25,12 +25,12 @@ private:
 	Hittable* world;
 
 	double aspectRatio = 1.0f / 1.0f;
-	int imgWidth = 500;
-	int imgHeight = 500;
-	int samplesPerPixel = 100;
+	int imgWidth = 1080;
+	int imgHeight = 1080;
+	int samplesPerPixel = 500;
 	int rayMaxDepth = 50;
 
-	int threadCount = 500;
+	int threadCount = 1080;
 	int linesRemaining = this->imgHeight;
 	int rowsPerTask = 1;
 
