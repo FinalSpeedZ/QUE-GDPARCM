@@ -32,9 +32,16 @@ void WorkerRaytracer::onStartTask()
 
             Vec3 color = write_color((1.0 / this->samplesPerPixel) * pixel_color);
 
+            this->guard.lock();
+            std::string filename = "C:/Users/asus/Coding/GDPARCM/QUE-GDPARCM/QUE-RaytracingInOneWeekend/Png/Test.png";
             this->imageSaver->setPixel(i, row, int(color.x()), int(color.y()), int(color.z()), this->samplesPerPixel);
-        }
 
+            if (row % 10 == 0)
+            {
+				this->imageSaver->saveImage(filename);
+            }
+        	this->guard.unlock();
+        }
     }
 
     this->executionEvent->onFinishedExecution();

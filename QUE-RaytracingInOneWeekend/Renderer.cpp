@@ -10,6 +10,10 @@
 
 Renderer::Renderer()
 {
+    srand(static_cast<unsigned int>(time(0)));
+
+    this->threadPool = NULL;
+
 	this->camera = new Camera();
 
     camera->aspect_ratio = this->aspectRatio;
@@ -17,13 +21,13 @@ Renderer::Renderer()
     camera->samples_per_pixel = this->samplesPerPixel;
     camera->max_depth = this->rayMaxDepth;
 
-    camera->vfov = 20;
-    camera->lookfrom = Point3(13, 2, 3);
-    camera->lookat = Point3(0, 0, 0);
+    camera->vfov = 40;
+    camera->lookfrom = Point3(-10, 4, -14);
+    camera->lookat = Point3(-2, 1,-5);
     camera->vup = Vec3(0, 1, 0);
 
     camera->defocus_angle = 0.6;
-    camera->focus_dist = 10.0;
+    camera->focus_dist = (camera->lookfrom - camera->lookat).length(); // focus on the center
 
     this->camera->initialize();
 
@@ -59,6 +63,8 @@ void Renderer::run()
         {
             this->isRunning = false;
         }
+
+        IETThread::sleep(1000);
     }
 
     this->image->saveImage(filename);
@@ -112,16 +118,16 @@ Hittable* Renderer::createWorld(int smallSpheres)
     }
 
     auto material1 = make_shared<DielectricMat>(1.5);
-    world->add(make_shared<Sphere>(Point3(0, 1, 0), 1.0, material1));
+    world->add(make_shared<Sphere>(Point3(0, 1, -5), 1.0, material1));
 
     auto material2 = make_shared<LambertianMat>(Color(0.4, 0.2, 0.1));
-    world->add(make_shared<Sphere>(Point3(-4, 1, 0), 1.0, material2));
+    world->add(make_shared<Sphere>(Point3(-2.5, 1, -5), 1.0, material2));
 
     auto material3 = make_shared<MetalMat>(Color(0.7, 0.6, 0.5), 0.0);
-    world->add(make_shared<Sphere>(Point3(4, 1, 0), 1.0, material3));
+    world->add(make_shared<Sphere>(Point3(2.5, 1, -5), 1.0, material3));
 
-    auto material4 = make_shared<LambertianMat>(Color(0.87, 0, 0));
-    world->add(make_shared<Sphere>(Point3(-8, 1, 0), 1.0, material4));
+    auto material4 = make_shared<MetalMat>(Color(0.8, 0.2, 0.3), 0.0);
+    world->add(make_shared<Sphere>(Point3(-5, 1, -5), 1.0, material4));
 
     return world;
 }

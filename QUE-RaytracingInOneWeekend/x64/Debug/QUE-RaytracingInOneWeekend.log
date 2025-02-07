@@ -1,4 +1,17 @@
-﻿  Renderer.cpp
-  main.cpp
-  Generating Code...
+﻿  ImageSaver.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244: '=': conversion from 'float' to '_Tp', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         with
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         [
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:             _Tp=uchar
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         ]
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244: '=': conversion from 'float' to '_Tp', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:         with
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:         [
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:             _Tp=uchar
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(20,59): warning C4244:         ]
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244: '=': conversion from 'float' to '_Tp', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         with
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         [
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:             _Tp=uchar
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         ]
   QUE-RaytracingInOneWeekend.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-RaytracingInOneWeekend.exe
