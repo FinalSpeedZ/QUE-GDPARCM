@@ -13,6 +13,6 @@ public:
 	void update(sf::Time deltaTime) override;
 
 private:
-	const float SPEED_MULTIPLIER = 100.0f;
+	const float SPEED_MULTIPLIER = 300.0f;
 };
 

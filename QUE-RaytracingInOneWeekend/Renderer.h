@@ -25,9 +25,9 @@ private:
 	Hittable* world;
 
 	double aspectRatio = 1.0f / 1.0f;
-	int imgWidth = 1080;
-	int imgHeight = 1080;
-	int samplesPerPixel = 500;
+	int imgWidth = 500;
+	int imgHeight = 500;
+	int samplesPerPixel = 200;
 	int rayMaxDepth = 50;
 
 	int threadCount = std::thread::hardware_concurrency();

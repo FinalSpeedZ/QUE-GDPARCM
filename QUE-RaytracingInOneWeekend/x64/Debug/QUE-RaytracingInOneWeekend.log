@@ -1,4 +1,13 @@
-﻿  ImageSaver.cpp
+﻿  Camera.cpp
+  Color.cpp
+  DielectricMat.cpp
+  HitRecord.cpp
+  HittableList.cpp
+  IETThread.cpp
+  Interval.cpp
+  LambertianMat.cpp
+  main.cpp
+  ImageSaver.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244: '=': conversion from 'float' to '_Tp', possible loss of data
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         with
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(19,59): warning C4244:         [
@@ -14,4 +23,19 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.c
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         [
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:             _Tp=uchar
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\ImageSaver.cpp(21,59): warning C4244:         ]
+  Material.cpp
+  MetalMat.cpp
+  PoolWorkerThread.cpp
+  Ray.cpp
+  Renderer.cpp
+  WorkerRaytracer.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\WorkerRaytracer.cpp(37,83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\WorkerRaytracer.cpp(37,67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-RaytracingInOneWeekend\WorkerRaytracer.cpp(37,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Sphere.cpp
+  ThreadPool.cpp
+  Utils.cpp
+  Vec3.cpp
+  Generating Code...
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/FORCE' specification
   QUE-RaytracingInOneWeekend.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-RaytracingInOneWeekend.exe

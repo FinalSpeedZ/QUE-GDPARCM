@@ -18,6 +18,7 @@ TextureManager* TextureManager::getInstance()
 	{
 		sharedInstance = new TextureManager();
 	}
+			
 	return sharedInstance;
 }
 
@@ -25,7 +26,7 @@ TextureManager::TextureManager()
 {
 	this->countStreamingAssets();
 
-	this->threadPool = new ThreadPool("TextureManagerPool", 50);
+	this->threadPool = new ThreadPool("TextureManagerPool", std::thread::hardware_concurrency());
 	this->threadPool->startScheduler();
 }
 
