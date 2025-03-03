@@ -134,9 +134,11 @@
     <ClCompile Include="AGameObject.cpp" />
     <ClCompile Include="BaseRunner.cpp" />
     <ClCompile Include="BGObject.cpp" />
+    <ClCompile Include="BusyWaitSempahore.cpp" />
     <ClCompile Include="FPSCounter.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="IconObject.cpp" />
+    <ClCompile Include="IETSemaphore.cpp" />
     <ClCompile Include="IETThread.cpp" />
     <ClCompile Include="IExecutionEvent.cpp" />
     <ClCompile Include="main.cpp" />
@@ -151,9 +153,11 @@
     <ClInclude Include="AGameObject.h" />
     <ClInclude Include="BaseRunner.h" />
     <ClInclude Include="BGObject.h" />
+    <ClInclude Include="BusyWaitSempahore.h" />
     <ClInclude Include="FPSCounter.h" />
     <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="IconObject.h" />
+    <ClInclude Include="IETSemaphore.h" />
     <ClInclude Include="IETThread.h" />
     <ClInclude Include="IExecutionEvent.h" />
     <ClInclude Include="IFinishedTask.h" />

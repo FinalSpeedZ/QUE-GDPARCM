@@ -44,6 +44,12 @@
     <ClCompile Include="PoolWorkerThread.cpp">
       <Filter>Thread</Filter>
     </ClCompile>
+    <ClCompile Include="BusyWaitSempahore.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="IETSemaphore.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Runner">
@@ -120,5 +126,9 @@
     <ClInclude Include="IWorkerAction.h">
       <Filter>Thread</Filter>
     </ClInclude>
+    <ClInclude Include="BusyWaitSempahore.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="IETSemaphore.h" />
   </ItemGroup>
 </Project>
