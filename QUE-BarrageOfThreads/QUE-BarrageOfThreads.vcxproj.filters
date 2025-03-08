@@ -129,6 +129,8 @@
     <ClInclude Include="BusyWaitSempahore.h">
       <Filter>Thread</Filter>
     </ClInclude>
-    <ClInclude Include="IETSemaphore.h" />
+    <ClInclude Include="IETSemaphore.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

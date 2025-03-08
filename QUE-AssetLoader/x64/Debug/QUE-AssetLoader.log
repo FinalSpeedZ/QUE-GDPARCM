@@ -8,7 +8,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exceptio
   
   AppWindow.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'AppWindow.cpp')
+  (compiling source file '../QUE-AssetLoader/AppWindow.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
@@ -16,7 +16,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exceptio
   
   BGObject.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'BGObject.cpp')
+  (compiling source file '../QUE-AssetLoader/BGObject.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
@@ -24,7 +24,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exceptio
   
   FPSCounter.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'FPSCounter.cpp')
+  (compiling source file '../QUE-AssetLoader/FPSCounter.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
@@ -36,7 +36,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\FPSCounter.cpp(22,51): 
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\FPSCounter.cpp(22,45): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
   GameObjectManager.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameObjectManager.cpp')
+  (compiling source file '../QUE-AssetLoader/GameObjectManager.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
@@ -45,7 +45,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exceptio
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\GameObjectManager.cpp(39,34): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   IconObject.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'IconObject.cpp')
+  (compiling source file '../QUE-AssetLoader/IconObject.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
@@ -54,7 +54,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exceptio
   IETThread.cpp
   main.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'main.cpp')
+  (compiling source file '../QUE-AssetLoader/main.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
@@ -63,7 +63,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exceptio
   StringUtils.cpp
   TextureDisplay.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'TextureDisplay.cpp')
+  (compiling source file '../QUE-AssetLoader/TextureDisplay.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
@@ -75,7 +75,7 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureDisplay.cpp(55,1
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-AssetLoader\TextureDisplay.cpp(56,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   TextureManager.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'TextureManager.cpp')
+  (compiling source file '../QUE-AssetLoader/TextureManager.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):

@@ -1,4 +1,28 @@
-﻿  BGObject.cpp
+﻿  AGameObject.cpp
   BaseRunner.cpp
+  BGObject.cpp
+  BusyWaitSempahore.cpp
+  FPSCounter.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\FPSCounter.cpp(24,57): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\FPSCounter.cpp(24,51): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\FPSCounter.cpp(24,45): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+  GameObjectManager.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\GameObjectManager.cpp(38,34): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  IconObject.cpp
+  IETSemaphore.cpp
+  IETThread.cpp
+  IExecutionEvent.cpp
+  main.cpp
+  PoolWorkerThread.cpp
+  StreamAssetLoader.cpp
+  StringUtils.cpp
+  TextureDisplay.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureDisplay.cpp(49,70): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureDisplay.cpp(56,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureDisplay.cpp(57,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  TextureManager.cpp
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureManager.cpp(100,42): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-BarrageOfThreads\TextureManager.cpp(117,37): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  ThreadPool.cpp
   Generating Code...
   QUE-BarrageOfThreads.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-BarrageOfThreads.exe

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Thread\IETSemaphore.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\IETThread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\PoolWorkerThread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\StreamAssetLoader.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread\ThreadPool.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\StringUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\AppWindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\AGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\FPSCounter\FPSCounter.cpp">
+      <Filter>GameObject\FPSCounter</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\GameObjectManager.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture\TextureManager.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\IconObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetLoader\VideoLoader.cpp">
+      <Filter>AssetLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetLoader\VideoLoaderEvent.cpp">
+      <Filter>AssetLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetLoader\VideoDisplay.cpp">
+      <Filter>AssetLoader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Window">
+      <UniqueIdentifier>{6835987f-1c49-490d-bf3d-8758a1451606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{3f7e4133-7c4c-4209-86ba-349170073c8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{7cc42b95-3302-4e6e-b61b-87e5695d8b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{40030a1b-16d0-4025-aaa5-1abda6dac6fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\FPSCounter">
+      <UniqueIdentifier>{7a7cc225-ed61-474f-81c8-cbd424848484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{de7aff5c-9897-4297-9a31-fa30df14073a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AssetLoader">
+      <UniqueIdentifier>{fad63827-4f7e-45a4-9e9f-ba3bc4e982c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="Thread\IETSemaphore.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\IETThread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\IExecutionEvent.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\IFinishedTask.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\IWorkerAction.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\PoolWorkerThread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\StreamAssetLoader.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\ThreadPool.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\StringUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\AppWindow.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\AGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\FPSCounter\FPSCounter.h">
+      <Filter>GameObject\FPSCounter</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\GameObjectManager.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture\TextureManager.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\IconObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetLoader\VideoLoader.h">
+      <Filter>AssetLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetLoader\VideoLoaderEvent.h">
+      <Filter>AssetLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetLoader\VideoDisplay.h">
+      <Filter>AssetLoader</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
