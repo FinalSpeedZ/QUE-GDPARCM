@@ -23,6 +23,7 @@
     <ClCompile Include="AssetLoader\VideoLoader.cpp" />
     <ClCompile Include="AssetLoader\VideoLoaderEvent.cpp" />
     <ClCompile Include="GameObject\AGameObject.cpp" />
+    <ClCompile Include="GameObject\BGObject.cpp" />
     <ClCompile Include="GameObject\FPSCounter\FPSCounter.cpp" />
     <ClCompile Include="GameObject\GameObjectManager.cpp" />
     <ClCompile Include="GameObject\IconObject.cpp" />
@@ -41,6 +42,7 @@
     <ClInclude Include="AssetLoader\VideoLoader.h" />
     <ClInclude Include="AssetLoader\VideoLoaderEvent.h" />
     <ClInclude Include="GameObject\AGameObject.h" />
+    <ClInclude Include="GameObject\BGObject.h" />
     <ClInclude Include="GameObject\FPSCounter\FPSCounter.h" />
     <ClInclude Include="GameObject\GameObjectManager.h" />
     <ClInclude Include="GameObject\IconObject.h" />

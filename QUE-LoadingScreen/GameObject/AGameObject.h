@@ -9,12 +9,6 @@ public:
 	AGameObject(std::string name);
 	~AGameObject();
 
-private:
-	AGameObject(const AGameObject&) = delete;
-	AGameObject(AGameObject&&) = delete;
-	AGameObject& operator=(const AGameObject&) = delete;
-	AGameObject& operator=(AGameObject&&) = delete;
-
 public:
 	virtual void initialize() = 0;
 	virtual void processInput(sf::Event event) = 0;

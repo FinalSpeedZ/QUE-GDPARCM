@@ -47,6 +47,9 @@
     <ClCompile Include="AssetLoader\VideoDisplay.cpp">
       <Filter>AssetLoader</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject\BGObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Window">
@@ -126,6 +129,9 @@
     </ClInclude>
     <ClInclude Include="AssetLoader\VideoDisplay.h">
       <Filter>AssetLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\BGObject.h">
+      <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

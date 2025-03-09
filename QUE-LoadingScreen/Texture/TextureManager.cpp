@@ -27,8 +27,6 @@ TextureManager* TextureManager::getInstance()
 
 TextureManager::TextureManager()
 {
-	//this->countStreamingAssets();
-
 	this->threadPool = new ThreadPool("TextureManagerPool", std::thread::hardware_concurrency());
 	this->threadPool->startScheduler();
 
@@ -56,6 +54,13 @@ void TextureManager::loadVideoAssetsInBackground()
 			std::cout << "[TextureManager] Loaded texture: " << assetName << " at index " << index << std::endl;
 			index++;
 		}
+	}
+
+	std::string backgroundPath = "../Media/Background.jpg";
+	if (std::filesystem::exists(backgroundPath))
+	{
+		this->instantiateAsTexture(backgroundPath, "BackgroundBG", false);
+		std::cout << "[TextureManager] Loaded background texture: " << backgroundPath << std::endl;
 	}
 
 }

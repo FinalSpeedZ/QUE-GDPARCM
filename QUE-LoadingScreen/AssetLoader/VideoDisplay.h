@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../GameObject/AGameObject.h"
-#include "../Thread/IExecutionEvent.h"
 
 #include <SFML/Audio/Music.hpp>
 
@@ -9,19 +8,18 @@
 
 class IconObject;
 
-class VideoDisplay : public AGameObject, public IExecutionEvent
+class VideoDisplay : public AGameObject
 {
 public:
 	VideoDisplay();
 
 public:
-	void initialize();
-	void processInput(sf::Event event);
-	void update(sf::Time deltaTime);
+	void initialize() override;
+	void processInput(sf::Event event) override;
+	void update(sf::Time deltaTime) override;
 
 private:
 	void spawnObject();
-	void onFinishedExecution() override;
 
 private:
 	std::vector<IconObject*> iconList;
@@ -36,7 +34,5 @@ private:
 	int numDisplayed = 0;
 
 	sf::Music bgm;
-
-	std::mutex guard; 
 };
 

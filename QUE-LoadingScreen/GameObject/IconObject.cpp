@@ -12,7 +12,6 @@ IconObject::IconObject(std::string name, int textureIndex) : AGameObject(name)
 
 void IconObject::initialize()
 {
-	//assign texture
 	sf::Texture* texture = TextureManager::getInstance()->getBaseTextureFromList(this->textureIndex);
 	this->sprite = new sf::Sprite(*texture);
 }
@@ -29,43 +28,20 @@ void IconObject::draw(sf::RenderWindow* targetWindow)
 {
     if (!this->sprite) return;
 
-    const sf::Texture& texture = this->sprite->getTexture();
+	this->sprite->setPosition(this->getPosition());
 
-    sf::Vector2f position = this->getPosition();
-    sf::Vector2u texSize = texture.getSize();
-    float width = static_cast<float>(texSize.x);
-    float height = static_cast<float>(texSize.y);
+    sf::RectangleShape border;
+    sf::FloatRect spriteBounds = this->sprite->getGlobalBounds();
 
-    sf::Vertex vertices[6];
+    border.setSize(spriteBounds.size + sf::Vector2f(10, 10)); 
 
-    vertices[0].position = sf::Vector2f(position.x, position.y);
-    vertices[0].texCoords = sf::Vector2f(0, 0);
-    vertices[0].color = sf::Color(255, 255, 255, 100); 
+    border.setFillColor(sf::Color::White);
 
-    vertices[1].position = sf::Vector2f(position.x + width, position.y);
-    vertices[1].texCoords = sf::Vector2f(width, 0);
-    vertices[1].color = sf::Color(255, 255, 255, 100); 
+    border.setPosition(sf::Vector2f(this->sprite->getPosition().x - 5, this->sprite->getPosition().y - 5));
 
-    vertices[2].position = sf::Vector2f(position.x, position.y + height);
-    vertices[2].texCoords = sf::Vector2f(0, height);
-    vertices[2].color = sf::Color(255, 255, 255, 255); 
+    targetWindow->draw(border);
 
-    vertices[3].position = sf::Vector2f(position.x, position.y + height);
-    vertices[3].texCoords = sf::Vector2f(0, height);
-    vertices[3].color = sf::Color(255, 255, 255, 255); 
-
-    vertices[4].position = sf::Vector2f(position.x + width, position.y);
-    vertices[4].texCoords = sf::Vector2f(width, 0);
-    vertices[4].color = sf::Color(255, 255, 255, 100); 
-
-    vertices[5].position = sf::Vector2f(position.x + width, position.y + height);
-    vertices[5].texCoords = sf::Vector2f(width, height);
-    vertices[5].color = sf::Color(255, 255, 255, 255); 
-
-    sf::RenderStates states;
-    states.texture = &texture;
-
-    targetWindow->draw(vertices, 6, sf::PrimitiveType::Triangles, states);
+    targetWindow->draw(*this->sprite);
 }
 
 

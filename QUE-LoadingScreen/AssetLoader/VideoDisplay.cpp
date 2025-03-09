@@ -11,12 +11,17 @@
 
 VideoDisplay::VideoDisplay() : AGameObject("VideoDisplay")
 {
-	this->iconList.clear();
+    this->iconList.clear();
 
-	if (!bgm.openFromFile("../Media/spaceCats.mp3"))
-	{
-		std::cerr << "Failed to load background music!" << std::endl;
-	}
+    if (!bgm.openFromFile("../Media/spaceCats.mp3"))
+    {
+        std::cerr << "Failed to load background music!" << std::endl;
+    }
+    else
+    {
+        bgm.setVolume(100); 
+        bgm.play();        
+    }
 }
 
 void VideoDisplay::initialize()
@@ -29,52 +34,44 @@ void VideoDisplay::processInput(sf::Event event)
 
 void VideoDisplay::update(sf::Time deltaTime)
 {
-	this->ticks += deltaTime.asMilliseconds();
-	
-	if (this->streamingType == StreamingType::SINGLE_STREAM && this->ticks > this->STREAMING_LOAD_DELAY && this->numDisplayed < 2057)
-	{
+    this->ticks += deltaTime.asMilliseconds();
 
-		this->ticks = 0.0f;
+    if (this->streamingType == StreamingType::SINGLE_STREAM && this->ticks > this->STREAMING_LOAD_DELAY && this->numDisplayed < 2057)
+    {
+        this->ticks = 0.0f;
+        this->spawnObject();
 
-		this->spawnObject();
+        if (this->numDisplayed == 0)
+        {
+            bgm.play();
+        }
 
-		if (this->numDisplayed == 0)
-		{
-			//bgm.play();
-		}
-
-		this->numDisplayed++;
-	}
-}
-
-void VideoDisplay::onFinishedExecution()
-{
-	this->spawnObject(); //executes spawn once the texture is ready.
+        this->numDisplayed++;
+    }
 }
 
 void VideoDisplay::spawnObject()
 {
-	if (this->iconList.size() >= 2)
-	{
-		AGameObject* oldestIcon = this->iconList.front();
-		this->iconList.erase(this->iconList.begin());
-		GameObjectManager::getInstance()->deleteObject(oldestIcon); 
-	}
+    if (this->iconList.size() >= 2)
+    {
+        AGameObject* oldestIcon = this->iconList.front();
+        this->iconList.erase(this->iconList.begin());
+        GameObjectManager::getInstance()->deleteObject(oldestIcon);
+    }
 
-	std::string objectName = "Icon_" + std::to_string(numDisplayed);
-	IconObject* iconObj = new IconObject(objectName, numDisplayed);
-	this->iconList.push_back(iconObj);
+    std::string objectName = "Icon_" + std::to_string(numDisplayed);
+    IconObject* iconObj = new IconObject(objectName, numDisplayed);
+    this->iconList.push_back(iconObj);
 
-	int IMG_WIDTH = 1280;
-	int IMG_HEIGHT = 720;
+    int IMG_WIDTH = 1280;
+    int IMG_HEIGHT = 720;
 
-	sf::Vector2u windowSize = sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT);
+    sf::Vector2u windowSize = sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT);
 
-	float x = (windowSize.x - IMG_WIDTH) * 0.5f;
-	float y = (windowSize.y - IMG_HEIGHT) * 0.5f;
+    float x = (windowSize.x - IMG_WIDTH) * 0.5f;
+    float y = (windowSize.y - IMG_HEIGHT) * 0.5f;
 
-	iconObj->setPosition(x, y);
+    iconObj->setPosition(x, y);
 
-	GameObjectManager::getInstance()->addObject(iconObj);
+    GameObjectManager::getInstance()->addObject(iconObj);
 }
-
