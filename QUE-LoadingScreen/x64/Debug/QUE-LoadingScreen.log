@@ -1,66 +1,14 @@
-﻿  VideoDisplay.cpp
+﻿  Player.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'AssetLoader/VideoDisplay.cpp')
+  (compiling source file 'GameObject/Player/Player.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
       C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  (compiling source file 'AssetLoader/VideoDisplay.cpp')
+  (compiling source file 'GameObject/Player/Player.cpp')
   
-  BGObject.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameObject/BGObject.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  (compiling source file 'GameObject/BGObject.cpp')
-  
-  FPSCounter.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameObject/FPSCounter/FPSCounter.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  (compiling source file 'GameObject/FPSCounter/FPSCounter.cpp')
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\FPSCounter\FPSCounter.cpp(18,20): warning C4834: discarding return value of function with [[nodiscard]] attribute
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\FPSCounter\FPSCounter.cpp(22,57): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\FPSCounter\FPSCounter.cpp(22,51): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\FPSCounter\FPSCounter.cpp(22,45): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
-  IconObject.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameObject/IconObject.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  (compiling source file 'GameObject/IconObject.cpp')
-  
-  LoadingBar.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'GameObject/LoadingBar/LoadingBar.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  (compiling source file 'GameObject/LoadingBar/LoadingBar.cpp')
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\LoadingBar\LoadingBar.cpp(19,20): warning C4834: discarding return value of function with [[nodiscard]] attribute
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\LoadingBar\LoadingBar.cpp(23,60): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\LoadingBar\LoadingBar.cpp(23,54): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\LoadingBar\LoadingBar.cpp(23,48): warning C4244: 'argument': conversion from 'float' to 'uint8_t', possible loss of data
   AppWindow.cpp
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'Window/AppWindow.cpp')
@@ -71,17 +19,6 @@ C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exceptio
   
 C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
   (compiling source file 'Window/AppWindow.cpp')
-  
-  main.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'main.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  (compiling source file 'main.cpp')
   
   Generating Code...
   QUE-LoadingScreen.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-LoadingScreen.exe

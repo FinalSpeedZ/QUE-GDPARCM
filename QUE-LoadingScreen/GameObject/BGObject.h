@@ -10,7 +10,6 @@ public:
 
 public:
 	void initialize();
-	void processInput(sf::Event event);
 	void update(sf::Time deltaTime);
 };
 

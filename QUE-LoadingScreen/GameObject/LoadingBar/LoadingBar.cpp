@@ -19,14 +19,10 @@ void LoadingBar::initialize()
 	font->openFromFile("../Media/Sansation.ttf");
 
 	this->progressText = new sf::Text(*font);
-	this->progressText->setPosition({ WINDOW_WIDTH / 2 - 100, WINDOW_HEIGHT / 2});
+	this->progressText->setPosition({ WINDOW_WIDTH / 2 - 100, WINDOW_HEIGHT - 100});
 	this->progressText->setOutlineColor(sf::Color(1.0f, 1.0f, 1.0f));
 	this->progressText->setOutlineThickness(2.5f);
 	this->progressText->setCharacterSize(50);
-}
-
-void LoadingBar::processInput(sf::Event event)
-{
 }
 
 void LoadingBar::update(sf::Time deltaTime)

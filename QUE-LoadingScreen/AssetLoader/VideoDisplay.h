@@ -16,7 +16,6 @@ public:
 
 public:
 	void initialize() override;
-	void processInput(sf::Event event) override;
 	void update(sf::Time deltaTime) override;
 
 private:

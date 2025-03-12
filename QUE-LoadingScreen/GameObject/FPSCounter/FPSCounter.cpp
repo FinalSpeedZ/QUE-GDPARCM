@@ -24,10 +24,6 @@ void FPSCounter::initialize()
 	this->statsText->setCharacterSize(50);
 }
 
-void FPSCounter::processInput(sf::Event event)
-{
-}
-
 void FPSCounter::update(sf::Time deltaTime)
 {
 	this->updateFPS(deltaTime);

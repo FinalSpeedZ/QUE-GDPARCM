@@ -16,10 +16,6 @@ void IconObject::initialize()
 	this->sprite = new sf::Sprite(*texture);
 }
 
-void IconObject::processInput(sf::Event event)
-{
-}
-
 void IconObject::update(sf::Time deltaTime)
 {
 }

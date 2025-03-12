@@ -28,10 +28,6 @@ void VideoDisplay::initialize()
 {
 }
 
-void VideoDisplay::processInput(sf::Event event)
-{
-}
-
 void VideoDisplay::update(sf::Time deltaTime)
 {
     this->ticks += deltaTime.asMilliseconds();

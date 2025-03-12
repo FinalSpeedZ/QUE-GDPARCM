@@ -14,6 +14,10 @@ AGameObject::~AGameObject()
 	this->texture = nullptr;
 }
 
+void AGameObject::processInput(sf::Event event)
+{
+}
+
 void AGameObject::draw(sf::RenderWindow* targetWindow)
 {
 	if (this->sprite != NULL)

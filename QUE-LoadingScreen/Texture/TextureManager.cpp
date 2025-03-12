@@ -33,10 +33,11 @@ TextureManager::TextureManager()
 	this->streamTextureList.reserve(3000);
 	this->textureMap.reserve(3000);
 
+	this->loadLoadingScreenAssets();
+
 	IExecutionEvent* event = new VideoLoaderEvent(); 
 	VideoLoader* videoLoader = new VideoLoader(FRAMES_PATH, event);
 	this->threadPool->scheduleTask(videoLoader);
-
 }
 
 void TextureManager::loadVideoAssetsInBackground()
@@ -62,7 +63,16 @@ void TextureManager::loadVideoAssetsInBackground()
 		this->instantiateAsTexture(backgroundPath, "BackgroundBG", false);
 		std::cout << "[TextureManager] Loaded background texture: " << backgroundPath << std::endl;
 	}
+}
 
+void TextureManager::loadLoadingScreenAssets()
+{
+	std::string playerPath = "../Media/Eagle.png";
+	if (std::filesystem::exists(playerPath))
+	{
+		this->instantiateAsTexture(playerPath, "Player", false);
+		std::cout << "[TextureManager] Loaded background texture: " << playerPath << std::endl;
+	}
 }
 
 void TextureManager::loadStreamingAssets()

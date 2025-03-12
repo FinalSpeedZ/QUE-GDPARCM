@@ -20,10 +20,6 @@ void BGObject::initialize()
 	this->sprite->setTextureRect(sf::IntRect({ 0, 0 }, { WINDOW_WIDTH, WINDOW_HEIGHT }));
 }
 
-void BGObject::processInput(sf::Event event)
-{
-}
-
 void BGObject::update(sf::Time deltaTime)
 {
 }

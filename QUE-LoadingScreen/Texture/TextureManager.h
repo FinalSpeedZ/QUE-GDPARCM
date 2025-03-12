@@ -17,6 +17,9 @@ public:
 
 public:
 	void loadVideoAssetsInBackground();
+
+	void loadLoadingScreenAssets();
+
 	void loadStreamingAssets(); //loading of assets during runtime
 	void loadSingleStreamAsset(int index, IExecutionEvent* executionEvent); //loads a single streaming asset based on index in directory
 
