@@ -50,6 +50,9 @@
     <ClCompile Include="GameObject\BGObject.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject\LoadingBar\LoadingBar.cpp">
+      <Filter>GameObject\LoadingBar</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Window">
@@ -72,6 +75,9 @@
     </Filter>
     <Filter Include="AssetLoader">
       <UniqueIdentifier>{fad63827-4f7e-45a4-9e9f-ba3bc4e982c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\LoadingBar">
+      <UniqueIdentifier>{2c751e25-1646-4f62-9126-9e0692c662e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +138,9 @@
     </ClInclude>
     <ClInclude Include="GameObject\BGObject.h">
       <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\LoadingBar\LoadingBar.hpp">
+      <Filter>GameObject\LoadingBar</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

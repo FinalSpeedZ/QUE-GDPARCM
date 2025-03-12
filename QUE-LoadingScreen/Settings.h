@@ -11,3 +11,5 @@ constexpr sf::Time TIME_PER_FRAME = sf::seconds(1.f / 60.f);
 
 // Speed Multiplier
 constexpr float BG_SPEED = 750.0f;
+
+constexpr int NUM_FRAMES = 2057.0f;

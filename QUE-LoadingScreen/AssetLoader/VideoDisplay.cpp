@@ -36,7 +36,7 @@ void VideoDisplay::update(sf::Time deltaTime)
 {
     this->ticks += deltaTime.asMilliseconds();
 
-    if (this->streamingType == StreamingType::SINGLE_STREAM && this->ticks > this->STREAMING_LOAD_DELAY && this->numDisplayed < 2057)
+    if (this->streamingType == StreamingType::SINGLE_STREAM && this->ticks > this->STREAMING_LOAD_DELAY && this->numDisplayed < NUM_FRAMES)
     {
         this->ticks = 0.0f;
         this->spawnObject();
@@ -74,4 +74,9 @@ void VideoDisplay::spawnObject()
     iconObj->setPosition(x, y);
 
     GameObjectManager::getInstance()->addObject(iconObj);
+}
+
+void VideoDisplay::onFinishedExecution()
+{
+
 }

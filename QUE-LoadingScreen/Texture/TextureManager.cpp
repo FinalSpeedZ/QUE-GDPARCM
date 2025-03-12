@@ -134,7 +134,7 @@ sf::Texture* TextureManager::getBaseTextureFromList(const int index)
 
 int TextureManager::getNumLoadedBaseTextures() const
 {
-	return this->streamTextureList.size();
+	return this->baseTextureList.size();
 }
 
 sf::Texture* TextureManager::getStreamTextureFromList(const int index)
@@ -178,6 +178,7 @@ void TextureManager::instantiateAsTexture(std::string path, std::string assetNam
 	else
 	{
 		this->baseTextureList.push_back(texture);
+
 	}
 
 } 

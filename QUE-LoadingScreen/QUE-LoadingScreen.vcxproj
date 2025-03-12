@@ -27,6 +27,7 @@
     <ClCompile Include="GameObject\FPSCounter\FPSCounter.cpp" />
     <ClCompile Include="GameObject\GameObjectManager.cpp" />
     <ClCompile Include="GameObject\IconObject.cpp" />
+    <ClCompile Include="GameObject\LoadingBar\LoadingBar.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Texture\TextureManager.cpp" />
     <ClCompile Include="Thread\IETSemaphore.cpp" />
@@ -46,6 +47,7 @@
     <ClInclude Include="GameObject\FPSCounter\FPSCounter.h" />
     <ClInclude Include="GameObject\GameObjectManager.h" />
     <ClInclude Include="GameObject\IconObject.h" />
+    <ClInclude Include="GameObject\LoadingBar\LoadingBar.hpp" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="Texture\TextureManager.h" />
     <ClInclude Include="Thread\IETSemaphore.h" />

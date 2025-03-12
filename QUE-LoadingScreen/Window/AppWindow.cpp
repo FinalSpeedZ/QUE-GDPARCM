@@ -4,6 +4,7 @@
 #include "../GameObject/FPSCounter/FPSCounter.h"
 #include "../Texture/TextureManager.h"
 #include "../AssetLoader/VideoDisplay.h"
+#include "../GameObject/LoadingBar/LoadingBar.hpp"
 
 AppWindow* AppWindow::sharedInstance = NULL;
 
@@ -15,6 +16,9 @@ AppWindow::AppWindow()
 
 	GameObjectManager::initialize();
 	TextureManager::initialize();
+
+	LoadingBar* loadingBar = new LoadingBar();
+	GameObjectManager::getInstance()->addObject(loadingBar);
 
 	FPSCounter* fpsCounter = new FPSCounter();
 	GameObjectManager::getInstance()->addObject(fpsCounter);
