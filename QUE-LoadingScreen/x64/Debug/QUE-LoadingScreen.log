@@ -1,24 +1,12 @@
 ﻿  Player.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
   (compiling source file 'GameObject/Player/Player.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
       see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
       see declaration of 'sf::Exception'
   
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
   (compiling source file 'GameObject/Player/Player.cpp')
   
-  AppWindow.cpp
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
-  (compiling source file 'Window/AppWindow.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\stdexcept(100,19):
-      see declaration of 'std::runtime_error'
-      C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
-      see declaration of 'sf::Exception'
-  
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Settings.h(15,26): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  (compiling source file 'Window/AppWindow.cpp')
-  
-  Generating Code...
-  QUE-LoadingScreen.vcxproj -> C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-LoadingScreen.exe
+  QUE-LoadingScreen.vcxproj -> C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\x64\Debug\QUE-LoadingScreen.exe

@@ -28,6 +28,7 @@
     <ClCompile Include="GameObject\GameObjectManager.cpp" />
     <ClCompile Include="GameObject\IconObject.cpp" />
     <ClCompile Include="GameObject\LoadingBar\LoadingBar.cpp" />
+    <ClCompile Include="GameObject\Pipes\Pipes.cpp" />
     <ClCompile Include="GameObject\Player\Player.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Texture\TextureManager.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="GameObject\GameObjectManager.h" />
     <ClInclude Include="GameObject\IconObject.h" />
     <ClInclude Include="GameObject\LoadingBar\LoadingBar.hpp" />
+    <ClInclude Include="GameObject\Pipes\Pipes.h" />
     <ClInclude Include="GameObject\Player\Player.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="Texture\TextureManager.h" />

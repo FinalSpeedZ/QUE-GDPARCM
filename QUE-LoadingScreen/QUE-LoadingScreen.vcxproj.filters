@@ -56,6 +56,9 @@
     <ClCompile Include="GameObject\Player\Player.cpp">
       <Filter>GameObject\Player</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject\Pipes\Pipes.cpp">
+      <Filter>GameObject\Pipes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Window">
@@ -84,6 +87,9 @@
     </Filter>
     <Filter Include="GameObject\Player">
       <UniqueIdentifier>{b942f057-28b6-46dd-9a11-6c800d0e77d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Pipes">
+      <UniqueIdentifier>{e5ce9f18-47ef-47d2-86a2-a0af18c7e57f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -151,5 +157,8 @@
       <Filter>GameObject\Player</Filter>
     </ClInclude>
     <ClInclude Include="Settings.h" />
+    <ClInclude Include="GameObject\Pipes\Pipes.h">
+      <Filter>GameObject\Pipes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

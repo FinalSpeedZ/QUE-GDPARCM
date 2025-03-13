@@ -1,6 +1,7 @@
 #pragma once
 
 #include "AGameObject.h"
+#include "FPSCounter/FPSCounter.h"
 
 class GameObjectManager
 {
@@ -33,8 +34,12 @@ public:
 	void deleteObject(AGameObject* gameObject);
 	void deleteObjectByName(std::string name);
 
+	void setFPSCounter(FPSCounter* fps);
+
 private:
 	std::unordered_map<std::string, AGameObject*> gameObjectMap;
 	std::vector<AGameObject*> gameObjectList;
+
+	AGameObject* FPSCounter;
 };
 

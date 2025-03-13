@@ -44,10 +44,21 @@ void Player::update(sf::Time deltaTime)
     if (posY + size.y > WINDOW_HEIGHT)
     {
         posY = WINDOW_HEIGHT - size.y;
-        velocityY = 0; 
+        velocityY = 0;
+
+        dead = true;
     }
 
-    this->setPosition(posX, posY);
+    if (dead)
+    {
+        this->setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+        dead = false;
+    }
+
+    else
+    {
+		this->setPosition(posX, posY);
+    }
 }
 
 void Player::processInput(sf::Event event)
@@ -56,13 +67,28 @@ void Player::processInput(sf::Event event)
     {
         onKeyDown(keyPressed->scancode);
     }
+
+    if (const auto* keyPressed = event.getIf<sf::Event::KeyReleased>())
+    {
+        onKeyUp(keyPressed->scancode);
+    }
 }
 
 void Player::onKeyDown(sf::Keyboard::Scancode key)
 {
-    if (key == sf::Keyboard::Scancode::Space)
+    if (key == sf::Keyboard::Scancode::Space && canJump)
     {
-        velocityY = jumpForce; 
+        velocityY = jumpForce;
+
+        canJump = false;
     }
 }
 
+void Player::onKeyUp(sf::Keyboard::Scancode key)
+{
+    if (key == sf::Keyboard::Scancode::Space)
+    {
+        velocityY = jumpForce;
+        canJump = true;
+    }
+}

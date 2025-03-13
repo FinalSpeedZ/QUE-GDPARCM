@@ -1,19 +1,19 @@
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\AssetLoader\VideoDisplay.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\VideoDisplay.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\AssetLoader\VideoLoader.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\VideoLoader.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\AssetLoader\VideoLoaderEvent.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\VideoLoaderEvent.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\AGameObject.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\AGameObject.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\BGObject.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\BGObject.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\FPSCounter\FPSCounter.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\FPSCounter.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\GameObjectManager.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\GameObjectManager.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\IconObject.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\IconObject.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\LoadingBar\LoadingBar.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\LoadingBar.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\Player\Player.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\Player.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\main.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\main.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Texture\TextureManager.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\TextureManager.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\IETSemaphore.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\IETSemaphore.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\IETThread.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\IETThread.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\PoolWorkerThread.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\PoolWorkerThread.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\StreamAssetLoader.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\StreamAssetLoader.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\ThreadPool.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\ThreadPool.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Utils\StringUtils.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\StringUtils.obj
-C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Window\AppWindow.cpp;C:\Users\asus\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\AppWindow.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\AssetLoader\VideoDisplay.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\VideoDisplay.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\AssetLoader\VideoLoader.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\VideoLoader.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\AssetLoader\VideoLoaderEvent.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\VideoLoaderEvent.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\AGameObject.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\AGameObject.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\BGObject.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\BGObject.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\FPSCounter\FPSCounter.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\FPSCounter.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\GameObjectManager.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\GameObjectManager.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\IconObject.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\IconObject.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\LoadingBar\LoadingBar.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\LoadingBar.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\GameObject\Player\Player.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\Player.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\main.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\main.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Texture\TextureManager.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\TextureManager.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\IETSemaphore.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\IETSemaphore.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\IETThread.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\IETThread.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\PoolWorkerThread.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\PoolWorkerThread.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\StreamAssetLoader.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\StreamAssetLoader.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Thread\ThreadPool.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\ThreadPool.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Utils\StringUtils.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\StringUtils.obj
+C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\Window\AppWindow.cpp;C:\Users\ACER NITRO 5\Coding\GDPARCM\QUE-GDPARCM\QUE-LoadingScreen\x64\Debug\AppWindow.obj

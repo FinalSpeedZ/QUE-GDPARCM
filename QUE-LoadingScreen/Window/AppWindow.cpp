@@ -25,7 +25,8 @@ AppWindow::AppWindow()
 	GameObjectManager::getInstance()->addObject(player);
 
 	FPSCounter* fpsCounter = new FPSCounter();
-	GameObjectManager::getInstance()->addObject(fpsCounter);
+	fpsCounter->initialize();
+	GameObjectManager::getInstance()->setFPSCounter(fpsCounter);
 }
 
 void AppWindow::run()

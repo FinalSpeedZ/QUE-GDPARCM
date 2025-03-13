@@ -53,6 +53,8 @@ void GameObjectManager::update(sf::Time deltaTime)
 	{
 		this->gameObjectList[i]->update(deltaTime);
 	}
+
+	this->FPSCounter->update(deltaTime);
 }
 
 void GameObjectManager::draw(sf::RenderWindow* window)
@@ -61,6 +63,8 @@ void GameObjectManager::draw(sf::RenderWindow* window)
 	{
 		this->gameObjectList[i]->draw(window);
 	}
+
+	this->FPSCounter->draw(window);
 }
 
 void GameObjectManager::addObject(AGameObject* gameObject)
@@ -99,4 +103,9 @@ void GameObjectManager::deleteObjectByName(std::string name)
 	if (object != NULL) {
 		this->deleteObject(object);
 	}
+}
+
+void GameObjectManager::setFPSCounter(::FPSCounter* fps)
+{
+	FPSCounter = fps;
 }

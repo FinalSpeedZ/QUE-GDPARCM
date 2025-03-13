@@ -13,12 +13,16 @@ public:
 	void processInput(sf::Event event) override;
 
 	void onKeyDown(const sf::Keyboard::Scancode key);
+	void onKeyUp(const sf::Keyboard::Scancode key);
 
 private:
 	float moveSpeed = 0.5f;
 
 	float velocityY;
 	const float gravity = 1000.0f;  
-	const float jumpForce = -450.0f; 
+	const float jumpForce = -450.0f;
+
+	bool canJump = true;
+	bool dead = false;
 
 };
