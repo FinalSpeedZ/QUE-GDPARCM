@@ -36,16 +36,15 @@ TextureManager::TextureManager()
 
 	this->loadLoadingScreenAssets();
 
-	const int totalFrames = 2057;  // You have exactly 2057 frames
 	const int numThreads = 4;
-	const int baseChunkSize = totalFrames / numThreads;
-	const int remainder = totalFrames % numThreads;
+	const int baseChunkSize = NUM_FRAMES / numThreads;
+	const int remainder = NUM_FRAMES % numThreads;
 
 	int startIndex = 0;
 
 	for (int i = 0; i < numThreads; i++)
 	{
-		int chunkSize = baseChunkSize + (i < remainder ? 1 : 0); // Distribute remainder evenly
+		int chunkSize = baseChunkSize + (i < remainder ? 1 : 0); 
 		IExecutionEvent* event = new VideoLoaderEvent();
 		VideoLoader* videoLoader = new VideoLoader(startIndex, event);
 		this->threadPool->scheduleTask(videoLoader);
