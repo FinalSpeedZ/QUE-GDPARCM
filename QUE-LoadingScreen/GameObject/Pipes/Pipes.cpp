@@ -58,8 +58,8 @@ void Pipes::update(sf::Time deltaTime)
 
     for (auto& pipe : pipePool)
     {
-        pipe.topPipe->move({ -PIPE_SPEED *  0.05, 0 });
-        pipe.bottomPipe->move({ -PIPE_SPEED * 0.05 , 0 });
+        pipe.topPipe->move({ -PIPE_SPEED * deltaSeconds, 0 });
+        pipe.bottomPipe->move({ -PIPE_SPEED * deltaSeconds , 0 });
 
 
         sf::FloatRect globalBounds = pipe.topPipe->getGlobalBounds();
