@@ -51,27 +51,55 @@ void TextureManager::loadVideoAssetsInBackground()
 			std::vector<std::string> tokens = StringUtils::split(path, '/');
 			std::string assetName = StringUtils::split(tokens[tokens.size() - 1], '.')[0];
 
-			this->instantiateAsTexture(path, std::to_string(index), false);
+			this->instantiateAsTexture(path, "Icon_" + std::to_string(index), false);
 			std::cout << "[TextureManager] Loaded texture: " << assetName << " at index " << index << std::endl;
 			index++;
 		}
 	}
 
-	std::string backgroundPath = "../Media/Background.jpg";
+	std::string backgroundPath = "../Media/VideoBG.jpg";
 	if (std::filesystem::exists(backgroundPath))
 	{
-		this->instantiateAsTexture(backgroundPath, "BackgroundBG", false);
+		this->instantiateAsTexture(backgroundPath, "VideoBG", false);
 		std::cout << "[TextureManager] Loaded background texture: " << backgroundPath << std::endl;
 	}
 }
 
 void TextureManager::loadLoadingScreenAssets()
 {
-	std::string playerPath = "../Media/Eagle.png";
+	std::string playerPath = "../Media/CatAhh.png";
 	if (std::filesystem::exists(playerPath))
 	{
-		this->instantiateAsTexture(playerPath, "Player", false);
+		this->instantiateAsTexture(playerPath, "CatAhh", false);
 		std::cout << "[TextureManager] Loaded background texture: " << playerPath << std::endl;
+	}
+
+	playerPath = "../Media/CatOhm.png";
+	if (std::filesystem::exists(playerPath))
+	{
+		this->instantiateAsTexture(playerPath, "CatOhm", false);
+		std::cout << "[TextureManager] Loaded background texture: " << playerPath << std::endl;
+	}
+
+	std::string loadingPath = "../Media/LoadingPaw.png";
+	if (std::filesystem::exists(loadingPath))
+	{
+		this->instantiateAsTexture(loadingPath, "LoadingPaw", false);
+		std::cout << "[TextureManager] Loaded background texture: " << loadingPath << std::endl;
+	}
+
+	std::string pipePath = "../Media/pipe.png";
+	if (std::filesystem::exists(pipePath))
+	{
+		this->instantiateAsTexture(pipePath, "Pipe", false);
+		std::cout << "[TextureManager] Loaded background texture: " << playerPath << std::endl;
+	}
+
+	std::string backgroundPath = "../Media/flappyBG.png";
+	if (std::filesystem::exists(backgroundPath))
+	{
+		this->instantiateAsTexture(backgroundPath, "FlappyBG", false);
+		std::cout << "[TextureManager] Loaded background texture: " << backgroundPath << std::endl;
 	}
 }
 

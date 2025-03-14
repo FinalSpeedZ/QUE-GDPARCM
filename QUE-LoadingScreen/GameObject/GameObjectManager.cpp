@@ -96,6 +96,17 @@ void GameObjectManager::deleteObject(AGameObject* gameObject)
 	delete gameObject;
 }
 
+void GameObjectManager::deleteAllObjects()
+{
+	for (AGameObject* obj : this->gameObjectList)
+	{
+		delete obj;
+	}
+
+	this->gameObjectList.clear();
+	this->gameObjectMap.clear();
+}
+
 void GameObjectManager::deleteObjectByName(std::string name)
 {
 	AGameObject* object = this->findObjectByName(name);

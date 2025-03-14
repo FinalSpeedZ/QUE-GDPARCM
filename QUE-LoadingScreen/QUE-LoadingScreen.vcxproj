@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AssetLoader\SFXManager.cpp" />
     <ClCompile Include="AssetLoader\VideoDisplay.cpp" />
     <ClCompile Include="AssetLoader\VideoLoader.cpp" />
     <ClCompile Include="AssetLoader\VideoLoaderEvent.cpp" />
     <ClCompile Include="GameObject\AGameObject.cpp" />
     <ClCompile Include="GameObject\BGObject.cpp" />
+    <ClCompile Include="GameObject\Fader.cpp" />
     <ClCompile Include="GameObject\FPSCounter\FPSCounter.cpp" />
     <ClCompile Include="GameObject\GameObjectManager.cpp" />
     <ClCompile Include="GameObject\IconObject.cpp" />
@@ -41,11 +43,13 @@
     <ClCompile Include="Window\AppWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssetLoader\SFXManager.h" />
     <ClInclude Include="AssetLoader\VideoDisplay.h" />
     <ClInclude Include="AssetLoader\VideoLoader.h" />
     <ClInclude Include="AssetLoader\VideoLoaderEvent.h" />
     <ClInclude Include="GameObject\AGameObject.h" />
     <ClInclude Include="GameObject\BGObject.h" />
+    <ClInclude Include="GameObject\Fader.h" />
     <ClInclude Include="GameObject\FPSCounter\FPSCounter.h" />
     <ClInclude Include="GameObject\GameObjectManager.h" />
     <ClInclude Include="GameObject\IconObject.h" />

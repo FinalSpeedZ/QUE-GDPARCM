@@ -9,8 +9,11 @@
 
 #include <iostream>
 
+#include "../GameObject/Player/Player.h"
+
 VideoDisplay::VideoDisplay() : AGameObject("VideoDisplay")
 {
+
     this->iconList.clear();
 
     if (!bgm.openFromFile("../Media/spaceCats.mp3"))
@@ -20,7 +23,6 @@ VideoDisplay::VideoDisplay() : AGameObject("VideoDisplay")
     else
     {
         bgm.setVolume(100); 
-        bgm.play();        
     }
 }
 
@@ -40,6 +42,7 @@ void VideoDisplay::update(sf::Time deltaTime)
         if (this->numDisplayed == 0)
         {
             bgm.play();
+            this->iconList.clear();
         }
 
         this->numDisplayed++;

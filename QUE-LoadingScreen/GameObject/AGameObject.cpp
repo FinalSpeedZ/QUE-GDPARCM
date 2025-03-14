@@ -7,11 +7,9 @@ AGameObject::AGameObject(std::string name)
 
 AGameObject::~AGameObject()
 {
-	delete this->sprite;
-	this->sprite = nullptr;
-
-	delete this->texture;
 	this->texture = nullptr;
+
+	this->sprite = nullptr;
 }
 
 void AGameObject::processInput(sf::Event event)

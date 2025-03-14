@@ -1,28 +1,39 @@
 #include "AppWindow.h"
 
+#include "../AssetLoader/SFXManager.h"
 #include "../GameObject/GameObjectManager.h"
 #include "../GameObject/FPSCounter/FPSCounter.h"
 #include "../Texture/TextureManager.h"
 #include "../AssetLoader/VideoDisplay.h"
+#include "../GameObject/BGObject.h"
 #include "../GameObject/LoadingBar/LoadingBar.hpp"
+#include "../GameObject/Pipes/Pipes.h"
 #include "../GameObject/Player/Player.h"
 
 AppWindow* AppWindow::sharedInstance = NULL;
 
 AppWindow::AppWindow()
-	: window(sf::VideoMode({ WINDOW_WIDTH, WINDOW_HEIGHT }), "QUE-Loading-Screen", sf::Style::Default)
+	: window(sf::VideoMode(sf::VideoMode::getDesktopMode()), "QUE-Loading-Screen", sf::Style::None)
 {
 	sharedInstance = this;
 	this->window.setFramerateLimit(int(FRAME_RATE));
 
 	GameObjectManager::initialize();
 	TextureManager::initialize();
+	SFXManager::initialize();
 
-	LoadingBar* loadingBar = new LoadingBar();
-	GameObjectManager::getInstance()->addObject(loadingBar);
+	// Loading Screen
+	BGObject* flappyBG = new BGObject("FlappyBG");
+	GameObjectManager::getInstance()->addObject(flappyBG);
 
 	Player* player = new Player();
 	GameObjectManager::getInstance()->addObject(player);
+
+	Pipes* pipes = new Pipes();
+	GameObjectManager::getInstance()->addObject(pipes);
+
+	LoadingBar* loadingBar = new LoadingBar();
+	GameObjectManager::getInstance()->addObject(loadingBar);
 
 	FPSCounter* fpsCounter = new FPSCounter();
 	fpsCounter->initialize();

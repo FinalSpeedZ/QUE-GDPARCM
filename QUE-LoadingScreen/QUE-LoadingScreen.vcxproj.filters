@@ -59,6 +59,10 @@
     <ClCompile Include="GameObject\Pipes\Pipes.cpp">
       <Filter>GameObject\Pipes</Filter>
     </ClCompile>
+    <ClCompile Include="AssetLoader\SFXManager.cpp">
+      <Filter>AssetLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Fader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Window">
@@ -160,5 +164,9 @@
     <ClInclude Include="GameObject\Pipes\Pipes.h">
       <Filter>GameObject\Pipes</Filter>
     </ClInclude>
+    <ClInclude Include="AssetLoader\SFXManager.h">
+      <Filter>AssetLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Fader.h" />
   </ItemGroup>
 </Project>

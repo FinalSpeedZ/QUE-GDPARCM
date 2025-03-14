@@ -3,6 +3,7 @@
 #include "../../Texture/TextureManager.h"
 
 #include "../../Settings.h"
+#include "../../AssetLoader/SFXManager.h"
 
 Player::Player() : AGameObject("Player")
 {
@@ -10,16 +11,25 @@ Player::Player() : AGameObject("Player")
 
 Player::~Player()
 {
+    this->texture = nullptr;
+    this->texture2 = nullptr;
+
+    delete this->sprite;
 }
 
 void Player::initialize()
 {
-	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap("Player", 0);
-	texture->setRepeated(true);
+	this->texture = TextureManager::getInstance()->getFromTextureMap("CatOhm", 0);
+    this->texture2 = TextureManager::getInstance()->getFromTextureMap("CatAhh", 0);
 
 	this->sprite = new sf::Sprite(*texture);
 
-	this->setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+    sf::FloatRect globalBounds = sprite->getGlobalBounds();
+    sf::Vector2f size = globalBounds.size;
+    this->sprite->setOrigin({ size.x / 2, size.y / 2 });
+
+    this->setScale(0.2, 0.2);
+	this->setPosition(WINDOW_WIDTH / 5, WINDOW_HEIGHT / 2);
 }
 
 
@@ -27,23 +37,23 @@ void Player::update(sf::Time deltaTime)
 {
     float deltaSeconds = deltaTime.asSeconds();
 
-    sf::FloatRect localBounds = sprite->getLocalBounds();
+    sf::FloatRect globalBounds = sprite->getGlobalBounds();
 
-    sf::Vector2f size = localBounds.size;
+    sf::Vector2f size = globalBounds.size;
 
     velocityY += gravity * deltaSeconds;
 
     posY += velocityY * deltaSeconds;
 
-    if (posY < 0)
+    if (posY - size.y / 2 < 0)
     {
-        posY = 0;
+        posY = size.y / 2;
         velocityY = 0;
     }
 
-    if (posY + size.y > WINDOW_HEIGHT)
+    if (posY + size.y / 2> WINDOW_HEIGHT)
     {
-        posY = WINDOW_HEIGHT - size.y;
+        posY = WINDOW_HEIGHT;
         velocityY = 0;
 
         dead = true;
@@ -51,7 +61,8 @@ void Player::update(sf::Time deltaTime)
 
     if (dead)
     {
-        this->setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
+        this->setPosition(WINDOW_WIDTH / 5, WINDOW_HEIGHT / 2);
+        SFXManager::getInstance()->getSound(SFXType::DIE)->play();
         dead = false;
     }
 
@@ -79,8 +90,11 @@ void Player::onKeyDown(sf::Keyboard::Scancode key)
     if (key == sf::Keyboard::Scancode::Space && canJump)
     {
         velocityY = jumpForce;
-
         canJump = false;
+
+        this->sprite->setTexture(*texture2);
+
+        SFXManager::getInstance()->getSound(SFXType::POP)->play();
     }
 }
 
@@ -88,7 +102,18 @@ void Player::onKeyUp(sf::Keyboard::Scancode key)
 {
     if (key == sf::Keyboard::Scancode::Space)
     {
-        velocityY = jumpForce;
         canJump = true;
+
+        this->sprite->setTexture(*texture);
     }
+}
+
+bool Player::isDead()
+{
+    return this->dead;
+}
+
+void Player::setDead(bool dead)
+{
+    this->dead = dead;
 }

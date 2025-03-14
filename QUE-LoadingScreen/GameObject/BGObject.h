@@ -11,5 +11,15 @@ public:
 public:
 	void initialize();
 	void update(sf::Time deltaTime);
+	void draw(sf::RenderWindow* targetWindow) override;
+
+	void startFade();
+	bool isFaded();
+
+private:
+
+	int fadeAlpha = 255;
+	bool fading = false;
+	sf::Sprite* sprite2 = nullptr;
 };
 

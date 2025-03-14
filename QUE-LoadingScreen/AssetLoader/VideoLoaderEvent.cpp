@@ -4,11 +4,15 @@
 
 #include "../GameObject/BGObject.h"
 #include "../GameObject/GameObjectManager.h"
-#include "../GameObject/FPSCounter/FPSCounter.h"
+#include "../Thread/IETThread.h"
 
 void VideoLoaderEvent::onFinishedExecution()
 {
-	BGObject* bgObject = new BGObject("BGObject");
+	GameObjectManager::getInstance()->deleteObjectByName("Pipes");
+	GameObjectManager::getInstance()->deleteObjectByName("Player");
+	GameObjectManager::getInstance()->deleteObjectByName("FlappyBG");
+
+	BGObject* bgObject = new BGObject("VideoBG");
 	GameObjectManager::getInstance()->addObject(bgObject);
 
 	VideoDisplay* textureDisplay = new VideoDisplay();

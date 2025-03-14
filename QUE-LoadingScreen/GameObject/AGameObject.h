@@ -7,7 +7,7 @@ class AGameObject
 {
 public:
 	AGameObject(std::string name);
-	~AGameObject();
+	virtual ~AGameObject();
 
 public:
 	virtual void initialize() = 0;
@@ -24,11 +24,11 @@ public:
 
 	virtual sf::FloatRect getLocalBounds();
 
-protected:
-	std::string name;
-
 	sf::Sprite* sprite = nullptr;
 	sf::Texture* texture = nullptr;
+
+protected:
+	std::string name;
 
 	float posX = 0.0f;
 	float posY = 0.0f;

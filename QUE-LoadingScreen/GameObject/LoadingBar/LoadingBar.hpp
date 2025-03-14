@@ -14,14 +14,7 @@ public:
 	void draw(sf::RenderWindow* targetWindow) override;
 
 private:
-	void updateProgress();
-
-private:
-	sf::Time updateTime;
-	sf::Text* progressText;
 	int framesPassed = 0;
-
-
-
+	sf::Time elapsedTime = sf::Time::Zero;
 };
 

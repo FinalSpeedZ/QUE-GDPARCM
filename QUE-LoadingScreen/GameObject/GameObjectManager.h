@@ -32,6 +32,7 @@ public:
 
 	void addObject(AGameObject* gameObject);
 	void deleteObject(AGameObject* gameObject);
+	void deleteAllObjects();
 	void deleteObjectByName(std::string name);
 
 	void setFPSCounter(FPSCounter* fps);

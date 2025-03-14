@@ -12,7 +12,7 @@ IconObject::IconObject(std::string name, int textureIndex) : AGameObject(name)
 
 void IconObject::initialize()
 {
-	sf::Texture* texture = TextureManager::getInstance()->getBaseTextureFromList(this->textureIndex);
+	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap(name, 0);
 	this->sprite = new sf::Sprite(*texture);
 }
 

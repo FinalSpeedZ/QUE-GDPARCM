@@ -18,7 +18,7 @@ void FPSCounter::initialize()
 	font->openFromFile("../Media/Sansation.ttf");
 
 	this->statsText = new sf::Text(*font);
-	this->statsText->setPosition({ WINDOW_WIDTH - 200, WINDOW_HEIGHT - 100 });
+	this->statsText->setPosition({ WINDOW_WIDTH - 200, 20 });
 	this->statsText->setOutlineColor(sf::Color(1.0f, 1.0f, 1.0f));
 	this->statsText->setOutlineThickness(2.5f);
 	this->statsText->setCharacterSize(50);
