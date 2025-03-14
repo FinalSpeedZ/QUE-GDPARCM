@@ -8,14 +8,14 @@ class IExecutionEvent;
 class VideoLoader : public IWorkerAction
 {
 public:
-	VideoLoader(std::string path, IExecutionEvent* executionEvent);
+	VideoLoader(int index, IExecutionEvent* executionEvent);
 	~VideoLoader();
 
 private:
 	void onStartTask() override;
 
 private:
-	std::string path;
+	int index;
 	IExecutionEvent* execEvent;
 };
 

@@ -9,7 +9,7 @@
 class VideoDisplay;
 
 BGObject::BGObject(std::string name)
-    : AGameObject(name), fadeAlpha(255), fading(false) 
+    : AGameObject(name)
 {
 }
 
@@ -63,9 +63,6 @@ void BGObject::draw(sf::RenderWindow* targetWindow)
 {
     if (name == "FlappyBG")
     {
-        this->sprite->setColor(sf::Color(255, 255, 255, fadeAlpha)); 
-        this->sprite2->setColor(sf::Color(255, 255, 255, fadeAlpha));
-
         targetWindow->draw(*this->sprite);
         targetWindow->draw(*this->sprite2);
     }

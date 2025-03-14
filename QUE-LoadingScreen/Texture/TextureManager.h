@@ -16,7 +16,7 @@ public:
 	static TextureManager* getInstance();
 
 public:
-	void loadVideoAssetsInBackground();
+	void loadVideoAssetsInBackground(int index);
 
 	void loadLoadingScreenAssets();
 

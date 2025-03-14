@@ -62,7 +62,9 @@
     <ClCompile Include="AssetLoader\SFXManager.cpp">
       <Filter>AssetLoader</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject\Fader.cpp" />
+    <ClCompile Include="GameObject\Fader.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Window">
@@ -167,6 +169,8 @@
     <ClInclude Include="AssetLoader\SFXManager.h">
       <Filter>AssetLoader</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject\Fader.h" />
+    <ClInclude Include="GameObject\Fader.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

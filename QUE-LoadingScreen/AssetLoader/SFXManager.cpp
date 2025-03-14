@@ -7,6 +7,14 @@ SFXManager::SFXManager()
     this->create(SFXType::POINT, "../Media/flappyPoint.mp3");
     this->create(SFXType::DIE, "../Media/flappyDie.mp3");
     this->create(SFXType::POP, "../Media/flappyPop.mp3");
+    this->create(SFXType::BGM, "../Media/flappyBGM.mp3");
+    this->create(SFXType::SPACECAT, "../Media/spaceCats.mp3");
+
+    this->mapSound[SFXType::DIE]->setVolume(70);
+    this->mapSound[SFXType::POP]->setVolume(70);
+    this->mapSound[SFXType::BGM]->setVolume(30);
+    this->mapSound[SFXType::BGM]->setLooping(true);
+    this->mapSound[SFXType::SPACECAT]->setVolume(70);
 }
 
 void SFXManager::initialize()

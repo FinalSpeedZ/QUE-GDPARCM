@@ -13,14 +13,18 @@
 AppWindow* AppWindow::sharedInstance = NULL;
 
 AppWindow::AppWindow()
-	: window(sf::VideoMode(sf::VideoMode::getDesktopMode()), "QUE-Loading-Screen", sf::Style::None)
+	: window(sf::VideoMode(sf::VideoMode::getDesktopMode()), "QUE-Loading-Screen", sf::Style::Default, sf::State::Fullscreen)
 {
 	sharedInstance = this;
 	this->window.setFramerateLimit(int(FRAME_RATE));
+	this->window.setMouseCursorVisible(false);
 
 	GameObjectManager::initialize();
 	TextureManager::initialize();
 	SFXManager::initialize();
+
+	BGObject* bgObject = new BGObject("VideoBG");
+	GameObjectManager::getInstance()->addObject(bgObject);
 
 	// Loading Screen
 	BGObject* flappyBG = new BGObject("FlappyBG");
@@ -79,6 +83,17 @@ void AppWindow::processEvents()
 		if (event->is<sf::Event::Closed>())
 		{
 			this->window.close();
+		}
+
+		if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>())
+		{
+			if (keyPressed->scancode == sf::Keyboard::Scancode::Escape)
+			{
+				this->window.close();
+			}
+
+			GameObjectManager::getInstance()->processInput(*event);
+
 		}
 
 		else

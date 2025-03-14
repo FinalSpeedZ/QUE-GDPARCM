@@ -24,7 +24,7 @@ AGameObject* GameObjectManager::findObjectByName(std::string name)
 
 	else
 	{
-		std::cout << "Object " << name << " not found!";
+		//std::cout << "Object " << name << " not found!";
 		return NULL;
 	}
 }

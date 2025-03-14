@@ -37,40 +37,51 @@ void Player::update(sf::Time deltaTime)
 {
     float deltaSeconds = deltaTime.asSeconds();
 
-    sf::FloatRect globalBounds = sprite->getGlobalBounds();
+	sf::FloatRect globalBounds = sprite->getGlobalBounds();
+	sf::Vector2f size = globalBounds.size;
 
-    sf::Vector2f size = globalBounds.size;
-
-    velocityY += gravity * deltaSeconds;
-
-    posY += velocityY * deltaSeconds;
-
-    if (posY - size.y / 2 < 0)
+	if (!dead)
     {
-        posY = size.y / 2;
-        velocityY = 0;
+        velocityY += gravity * deltaSeconds;
+        posY += velocityY * deltaSeconds;
+
+        if (posY - size.y / 2 < 0)
+        {
+            posY = size.y / 2;
+            velocityY = 0;
+        }
+
+        if (posY + size.y / 2 >= WINDOW_HEIGHT)
+        {
+            posY = WINDOW_HEIGHT - size.y / 2; 
+            velocityY = 0;
+            dead = true;
+
+            SFXManager::getInstance()->getSound(SFXType::DIE)->play();
+
+            elapsedTime = sf::Time::Zero;
+        }
+
+        this->setPosition(posX, posY);
     }
 
-    if (posY + size.y / 2> WINDOW_HEIGHT)
+    else 
     {
-        posY = WINDOW_HEIGHT;
-        velocityY = 0;
+        elapsedTime += deltaTime;
 
-        dead = true;
-    }
+        if (elapsedTime.asSeconds() >= 0.2f)
+        {
+            this->dead = false;
+            this->elapsedTime = sf::Time::Zero;
 
-    if (dead)
-    {
-        this->setPosition(WINDOW_WIDTH / 5, WINDOW_HEIGHT / 2);
-        SFXManager::getInstance()->getSound(SFXType::DIE)->play();
-        dead = false;
-    }
+            if (this->posY + size.y / 2 >= WINDOW_HEIGHT)
+				this->setPosition(WINDOW_WIDTH / 5, WINDOW_HEIGHT / 2);
 
-    else
-    {
-		this->setPosition(posX, posY);
+            velocityY = 0;
+        }
     }
 }
+
 
 void Player::processInput(sf::Event event)
 {

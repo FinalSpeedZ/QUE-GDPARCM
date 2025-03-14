@@ -7,10 +7,10 @@
 #include "../GameObject/GameObjectManager.h"
 #include "../GameObject/Player/Player.h"
 
-VideoLoader::VideoLoader(std::string path, IExecutionEvent* executionEvent)
+VideoLoader::VideoLoader(int index, IExecutionEvent* executionEvent)
 {
-	this->path = path;
 	this->execEvent = executionEvent;
+    this->index = index;
 }
 
 VideoLoader::~VideoLoader()
@@ -20,9 +20,9 @@ VideoLoader::~VideoLoader()
 
 void VideoLoader::onStartTask()
 {
-    TextureManager::getInstance()->loadVideoAssetsInBackground();
+    TextureManager::getInstance()->loadVideoAssetsInBackground(index);
 
-    this->execEvent->onFinishedExecution();
+    //this->execEvent->onFinishedExecution();
 
     delete this;
 }

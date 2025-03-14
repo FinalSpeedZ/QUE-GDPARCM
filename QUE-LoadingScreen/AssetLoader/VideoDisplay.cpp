@@ -4,11 +4,13 @@
 #include "../Window/AppWindow.h"
 #include "../GameObject/GameObjectManager.h"
 #include "../GameObject/IconObject.h"
+#include "../GameObject/Fader.h"
 
 #include "../Settings.h"
 
 #include <iostream>
 
+#include "SFXManager.h"
 #include "../GameObject/Player/Player.h"
 
 VideoDisplay::VideoDisplay() : AGameObject("VideoDisplay")
@@ -16,14 +18,7 @@ VideoDisplay::VideoDisplay() : AGameObject("VideoDisplay")
 
     this->iconList.clear();
 
-    if (!bgm.openFromFile("../Media/spaceCats.mp3"))
-    {
-        std::cerr << "Failed to load background music!" << std::endl;
-    }
-    else
-    {
-        bgm.setVolume(100); 
-    }
+    this->bgm = SFXManager::getInstance()->getSound(SFXType::SPACECAT);
 }
 
 void VideoDisplay::initialize()
@@ -41,12 +36,21 @@ void VideoDisplay::update(sf::Time deltaTime)
 
         if (this->numDisplayed == 0)
         {
-            bgm.play();
+            bgm->play();
             this->iconList.clear();
         }
 
         this->numDisplayed++;
+   
+	    if (this->numDisplayed == NUM_FRAMES)
+	    {
+            GameObjectManager::getInstance()->deleteObjectByName("Fader");
+
+            Fader* fader = new Fader("Ender");
+            GameObjectManager::getInstance()->addObject(fader);
+	    }
     }
+
 }
 
 void VideoDisplay::spawnObject()
@@ -77,5 +81,4 @@ void VideoDisplay::spawnObject()
 
 void VideoDisplay::onFinishedExecution()
 {
-
 }

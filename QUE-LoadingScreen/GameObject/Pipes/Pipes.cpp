@@ -48,25 +48,28 @@ void Pipes::update(sf::Time deltaTime)
 {
     float deltaSeconds = deltaTime.asSeconds();
 
-    if (!player->isDead() && pipePool.empty())
+    if (pipePool.empty())
     {
         this->initialize();
+        return;
     }
+
+    PipePair* collidedPipe = nullptr;
 
     for (auto& pipe : pipePool)
     {
-        float newX = pipe.topPipe->getPosition().x - PIPE_SPEED * deltaSeconds;
-        pipe.topPipe->setPosition({ newX, pipe.topPipe->getPosition().y });
-        pipe.bottomPipe->setPosition({ newX, pipe.bottomPipe->getPosition().y });
+        pipe.topPipe->move({ -PIPE_SPEED *  0.05, 0 });
+        pipe.bottomPipe->move({ -PIPE_SPEED * 0.05 , 0 });
+
 
         sf::FloatRect globalBounds = pipe.topPipe->getGlobalBounds();
         sf::Vector2f size = globalBounds.size;
 
-        if (!pipe.passed && pipe.topPipe->getPosition().x + size.x / 2 < player->sprite->getPosition().x && 
+        if (!pipe.passed && pipe.topPipe->getPosition().x + size.x / 2 < player->sprite->getPosition().x &&
             pipe.bottomPipe->getPosition().x + size.x / 2 < player->sprite->getPosition().x)
         {
             SFXManager::getInstance()->getSound(SFXType::POINT)->play();
-            pipe.passed = true; 
+            pipe.passed = true;
         }
 
         if (pipe.topPipe->getPosition().x + size.x < 0)
@@ -78,15 +81,18 @@ void Pipes::update(sf::Time deltaTime)
             pipe.bottomPipe->getGlobalBounds().findIntersection(player->sprite->getGlobalBounds()))
         {
             player->setDead(true);
+            SFXManager::getInstance()->getSound(SFXType::DIE)->play();
+            collidedPipe = &pipe; 
             break;
         }
     }
 
-    if (player->isDead())
+    if (collidedPipe)
     {
-        pipePool.clear();
+        resetPipe(*collidedPipe); 
     }
 }
+
 
 void Pipes::resetPipe(PipePair& pipe)
 {

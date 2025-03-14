@@ -29,4 +29,6 @@ private:
 	bool dead = false;
 
 	sf::Texture* texture2 = nullptr;
+
+	sf::Time elapsedTime = sf::Time::Zero;
 };

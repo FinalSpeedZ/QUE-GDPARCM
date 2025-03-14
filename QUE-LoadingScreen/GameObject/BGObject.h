@@ -18,8 +18,6 @@ public:
 
 private:
 
-	int fadeAlpha = 255;
-	bool fading = false;
 	sf::Sprite* sprite2 = nullptr;
 };
 

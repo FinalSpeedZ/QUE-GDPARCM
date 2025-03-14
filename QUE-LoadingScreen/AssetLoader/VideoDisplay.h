@@ -3,7 +3,7 @@
 #include "../GameObject/AGameObject.h"
 #include "../Thread/IExecutionEvent.h"
 
-#include <SFML/Audio/Music.hpp>
+#include "SFML/Audio.hpp"
 
 #include <mutex>
 
@@ -34,11 +34,6 @@ private:
 
 	int numDisplayed = 0;
 
-	sf::Music bgm;
-
-	sf::RectangleShape fadeOverlay; 
-	int fadeAlpha = 0;              
-	int fadeSpeed = 5;
-
+	sf::Sound* bgm;
 };
 

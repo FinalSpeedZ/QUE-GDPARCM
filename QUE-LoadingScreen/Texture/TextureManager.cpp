@@ -5,6 +5,7 @@
 #include <iostream>
 #include <random>
 
+#include "../Settings.h"
 #include "../Utils/StringUtils.h"
 #include "../Thread/IETThread.h"
 #include "../Thread/StreamAssetLoader.h"
@@ -35,38 +36,64 @@ TextureManager::TextureManager()
 
 	this->loadLoadingScreenAssets();
 
-	IExecutionEvent* event = new VideoLoaderEvent(); 
-	VideoLoader* videoLoader = new VideoLoader(FRAMES_PATH, event);
-	this->threadPool->scheduleTask(videoLoader);
+	const int totalFrames = 2057;  // You have exactly 2057 frames
+	const int numThreads = 4;
+	const int baseChunkSize = totalFrames / numThreads;
+	const int remainder = totalFrames % numThreads;
+
+	int startIndex = 0;
+
+	for (int i = 0; i < numThreads; i++)
+	{
+		int chunkSize = baseChunkSize + (i < remainder ? 1 : 0); // Distribute remainder evenly
+		IExecutionEvent* event = new VideoLoaderEvent();
+		VideoLoader* videoLoader = new VideoLoader(startIndex, event);
+		this->threadPool->scheduleTask(videoLoader);
+
+		startIndex += chunkSize;
+	}
 }
 
-void TextureManager::loadVideoAssetsInBackground()
+void TextureManager::loadVideoAssetsInBackground(int startIndex)
 {
-	int index = 0; 
+	std::vector<std::filesystem::path> pngFiles;
+
 	for (const auto& entry : std::filesystem::directory_iterator(FRAMES_PATH))
 	{
 		if (entry.path().extension() == ".png")
 		{
-			std::string path = entry.path().string();
-			std::vector<std::string> tokens = StringUtils::split(path, '/');
-			std::string assetName = StringUtils::split(tokens[tokens.size() - 1], '.')[0];
-
-			this->instantiateAsTexture(path, "Icon_" + std::to_string(index), false);
-			std::cout << "[TextureManager] Loaded texture: " << assetName << " at index " << index << std::endl;
-			index++;
+			pngFiles.push_back(entry.path());
 		}
 	}
 
+	std::sort(pngFiles.begin(), pngFiles.end());
+
+	if (startIndex >= static_cast<int>(pngFiles.size())) return;
+
+	int endIndex = std::min(startIndex + 515, static_cast<int>(pngFiles.size())); 
+
+	for (int i = startIndex; i < endIndex; i++)
+	{
+		IETThread::sleep(100);
+
+		std::string path = pngFiles[i].string();
+		std::string assetName = "Icon_" + std::to_string(i);
+
+		this->instantiateAsTexture(path, assetName, false);
+		std::cout << "[TextureManager] Loaded texture: " << assetName << std::endl;
+	}
+}
+
+
+void TextureManager::loadLoadingScreenAssets()
+{
 	std::string backgroundPath = "../Media/VideoBG.jpg";
 	if (std::filesystem::exists(backgroundPath))
 	{
 		this->instantiateAsTexture(backgroundPath, "VideoBG", false);
 		std::cout << "[TextureManager] Loaded background texture: " << backgroundPath << std::endl;
 	}
-}
 
-void TextureManager::loadLoadingScreenAssets()
-{
 	std::string playerPath = "../Media/CatAhh.png";
 	if (std::filesystem::exists(playerPath))
 	{
@@ -95,7 +122,7 @@ void TextureManager::loadLoadingScreenAssets()
 		std::cout << "[TextureManager] Loaded background texture: " << playerPath << std::endl;
 	}
 
-	std::string backgroundPath = "../Media/flappyBG.png";
+	 backgroundPath = "../Media/flappyBG.png";
 	if (std::filesystem::exists(backgroundPath))
 	{
 		this->instantiateAsTexture(backgroundPath, "FlappyBG", false);

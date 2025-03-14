@@ -10,6 +10,8 @@ enum class SFXType : int
 	POINT,
 	DIE,
 	POP,
+	BGM,
+	SPACECAT,
 };
 
 class SFXManager

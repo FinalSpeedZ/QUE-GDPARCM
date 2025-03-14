@@ -4,17 +4,12 @@
 
 #include "../GameObject/BGObject.h"
 #include "../GameObject/GameObjectManager.h"
+#include "../GameObject/Fader.h"
 #include "../Thread/IETThread.h"
+
+class Fader;
 
 void VideoLoaderEvent::onFinishedExecution()
 {
-	GameObjectManager::getInstance()->deleteObjectByName("Pipes");
-	GameObjectManager::getInstance()->deleteObjectByName("Player");
-	GameObjectManager::getInstance()->deleteObjectByName("FlappyBG");
 
-	BGObject* bgObject = new BGObject("VideoBG");
-	GameObjectManager::getInstance()->addObject(bgObject);
-
-	VideoDisplay* textureDisplay = new VideoDisplay();
-	GameObjectManager::getInstance()->addObject(textureDisplay);
 }
